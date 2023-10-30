@@ -28,68 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new Container();
+            RadTreeNode radTreeNode1 = new RadTreeNode();
+            RadTreeNode radTreeNode2 = new RadTreeNode();
+            RadTreeNode radTreeNode3 = new RadTreeNode();
+            RadTreeNode radTreeNode4 = new RadTreeNode();
+            RadTreeNode radTreeNode5 = new RadTreeNode();
             RdMainDock = new Telerik.WinControls.UI.Docking.RadDock();
-            ToolWindowWebBrowser = new Telerik.WinControls.UI.Docking.ToolWindow();
-            wVWhatsApp = new Microsoft.Web.WebView2.WinForms.WebView2();
-            ToolTabStripMenu = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             ToolWindowMenu = new Telerik.WinControls.UI.Docking.ToolWindow();
+            RadTreeViewMenu = new RadTreeView();
+            imageList1 = new ImageList(components);
+            ToolTabStripMenu = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             documentContainerMain = new Telerik.WinControls.UI.Docking.DocumentContainer();
             ToolTabStripWebBrowser = new Telerik.WinControls.UI.Docking.ToolTabStrip();
-            radPanelhEADER = new RadPanel();
+            ToolWindowWebBrowser = new Telerik.WinControls.UI.Docking.ToolWindow();
+            radSplitContainer1 = new RadSplitContainer();
+            splitPanel1 = new SplitPanel();
+            radSplitContainer2 = new RadSplitContainer();
+            splitPanel3 = new SplitPanel();
+            radPictureBox1 = new RadPictureBox();
+            splitPanel4 = new SplitPanel();
+            RadBtnLogout = new RadButton();
+            RadBtnLogin = new RadButton();
+            splitPanel2 = new SplitPanel();
+            backgroundWorker1 = new BackgroundWorker();
+            RadTextBoxLog = new RadTextBox();
             ((ISupportInitialize)RdMainDock).BeginInit();
             RdMainDock.SuspendLayout();
-            ToolWindowWebBrowser.SuspendLayout();
-            ((ISupportInitialize)wVWhatsApp).BeginInit();
+            ToolWindowMenu.SuspendLayout();
+            ((ISupportInitialize)RadTreeViewMenu).BeginInit();
             ((ISupportInitialize)ToolTabStripMenu).BeginInit();
             ToolTabStripMenu.SuspendLayout();
             ((ISupportInitialize)documentContainerMain).BeginInit();
             ((ISupportInitialize)ToolTabStripWebBrowser).BeginInit();
             ToolTabStripWebBrowser.SuspendLayout();
-            ((ISupportInitialize)radPanelhEADER).BeginInit();
+            ToolWindowWebBrowser.SuspendLayout();
+            ((ISupportInitialize)radSplitContainer1).BeginInit();
+            radSplitContainer1.SuspendLayout();
+            ((ISupportInitialize)splitPanel1).BeginInit();
+            splitPanel1.SuspendLayout();
+            ((ISupportInitialize)radSplitContainer2).BeginInit();
+            radSplitContainer2.SuspendLayout();
+            ((ISupportInitialize)splitPanel3).BeginInit();
+            splitPanel3.SuspendLayout();
+            ((ISupportInitialize)radPictureBox1).BeginInit();
+            ((ISupportInitialize)splitPanel4).BeginInit();
+            splitPanel4.SuspendLayout();
+            ((ISupportInitialize)RadBtnLogout).BeginInit();
+            ((ISupportInitialize)RadBtnLogin).BeginInit();
+            ((ISupportInitialize)splitPanel2).BeginInit();
+            splitPanel2.SuspendLayout();
+            ((ISupportInitialize)RadTextBoxLog).BeginInit();
             ((ISupportInitialize)this).BeginInit();
             SuspendLayout();
             // 
             // RdMainDock
             // 
-            RdMainDock.ActiveWindow = ToolWindowWebBrowser;
+            RdMainDock.ActiveWindow = ToolWindowMenu;
+            RdMainDock.BackgroundImage = Properties.Resources.A3D256;
+            RdMainDock.BackgroundImageLayout = ImageLayout.Center;
             RdMainDock.Controls.Add(ToolTabStripMenu);
             RdMainDock.Controls.Add(documentContainerMain);
             RdMainDock.Controls.Add(ToolTabStripWebBrowser);
             RdMainDock.Dock = DockStyle.Fill;
             RdMainDock.IsCleanUpTarget = true;
-            RdMainDock.Location = new Point(0, 47);
+            RdMainDock.Location = new Point(0, 0);
             RdMainDock.MainDocumentContainer = documentContainerMain;
             RdMainDock.Name = "RdMainDock";
             // 
             // 
             // 
             RdMainDock.RootElement.MinSize = new Size(25, 25);
-            RdMainDock.Size = new Size(1134, 729);
+            RdMainDock.Size = new Size(1358, 423);
             RdMainDock.TabIndex = 0;
             RdMainDock.TabStop = false;
             // 
-            // ToolWindowWebBrowser
+            // ToolWindowMenu
             // 
-            ToolWindowWebBrowser.Caption = null;
-            ToolWindowWebBrowser.Controls.Add(wVWhatsApp);
-            ToolWindowWebBrowser.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ToolWindowWebBrowser.Location = new Point(1, 24);
-            ToolWindowWebBrowser.Name = "ToolWindowWebBrowser";
-            ToolWindowWebBrowser.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            ToolWindowWebBrowser.Size = new Size(387, 693);
-            ToolWindowWebBrowser.Text = "A3D What's App Web";
+            ToolWindowMenu.Caption = null;
+            ToolWindowMenu.Controls.Add(RadTreeViewMenu);
+            ToolWindowMenu.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ToolWindowMenu.Location = new Point(1, 24);
+            ToolWindowMenu.Name = "ToolWindowMenu";
+            ToolWindowMenu.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
+            ToolWindowMenu.Size = new Size(198, 387);
+            ToolWindowMenu.Text = "A3D What's App Sender";
             // 
-            // wVWhatsApp
+            // RadTreeViewMenu
             // 
-            wVWhatsApp.AllowExternalDrop = true;
-            wVWhatsApp.CreationProperties = null;
-            wVWhatsApp.DefaultBackgroundColor = Color.White;
-            wVWhatsApp.Dock = DockStyle.Fill;
-            wVWhatsApp.Location = new Point(0, 0);
-            wVWhatsApp.Name = "wVWhatsApp";
-            wVWhatsApp.Size = new Size(387, 693);
-            wVWhatsApp.TabIndex = 0;
-            wVWhatsApp.ZoomFactor = 1D;
+            RadTreeViewMenu.BackColor = Color.FromArgb(233, 240, 249);
+            RadTreeViewMenu.Dock = DockStyle.Fill;
+            RadTreeViewMenu.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            RadTreeViewMenu.ForeColor = Color.Black;
+            RadTreeViewMenu.ImageList = imageList1;
+            RadTreeViewMenu.Location = new Point(0, 0);
+            RadTreeViewMenu.Name = "RadTreeViewMenu";
+            radTreeNode1.Expanded = true;
+            radTreeNode1.ImageIndex = 0;
+            radTreeNode1.Name = "mnuItemMain";
+            radTreeNode2.ImageIndex = 1;
+            radTreeNode2.Name = "mnuItemLogin";
+            radTreeNode2.Tag = "";
+            radTreeNode2.Text = "Login";
+            radTreeNode3.ImageIndex = 2;
+            radTreeNode3.Name = "mnuItemCreateContact";
+            radTreeNode3.Tag = "FrmCreateContact";
+            radTreeNode3.Text = "Create Contact";
+            radTreeNode4.ImageIndex = 3;
+            radTreeNode4.Name = "mnuItemUploadContact";
+            radTreeNode4.Tag = "FrmUploadContact";
+            radTreeNode4.Text = "Upload Contact";
+            radTreeNode5.ImageIndex = 4;
+            radTreeNode5.Name = "mnuItemSendMessage";
+            radTreeNode5.Tag = "FrmSendMessage";
+            radTreeNode5.Text = "Send Message";
+            radTreeNode1.Nodes.AddRange(new RadTreeNode[] { radTreeNode2, radTreeNode3, radTreeNode4, radTreeNode5 });
+            radTreeNode1.Text = "A3D What's App Sender";
+            RadTreeViewMenu.Nodes.AddRange(new RadTreeNode[] { radTreeNode1 });
+            RadTreeViewMenu.RightToLeft = RightToLeft.No;
+            RadTreeViewMenu.ShowLines = true;
+            RadTreeViewMenu.ShowNodeToolTips = true;
+            RadTreeViewMenu.Size = new Size(198, 387);
+            RadTreeViewMenu.SpacingBetweenNodes = -1;
+            RadTreeViewMenu.TabIndex = 0;
+            RadTreeViewMenu.NodeMouseDoubleClick += RadTreeViewMenu_NodeMouseDoubleClick;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth8Bit;
+            imageList1.ImageSize = new Size(16, 16);
+            imageList1.TransparentColor = Color.Transparent;
             // 
             // ToolTabStripMenu
             // 
@@ -101,23 +169,14 @@
             // 
             ToolTabStripMenu.RootElement.MinSize = new Size(25, 25);
             ToolTabStripMenu.SelectedIndex = 0;
-            ToolTabStripMenu.Size = new Size(200, 719);
+            ToolTabStripMenu.Size = new Size(200, 413);
             ToolTabStripMenu.SizeInfo.AutoSizeScale = new SizeF(-0.305825233F, 0F);
             ToolTabStripMenu.TabIndex = 1;
             ToolTabStripMenu.TabStop = false;
             // 
-            // ToolWindowMenu
-            // 
-            ToolWindowMenu.Caption = null;
-            ToolWindowMenu.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ToolWindowMenu.Location = new Point(1, 24);
-            ToolWindowMenu.Name = "ToolWindowMenu";
-            ToolWindowMenu.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            ToolWindowMenu.Size = new Size(198, 693);
-            ToolWindowMenu.Text = "A3D What's App Sender";
-            // 
             // documentContainerMain
             // 
+            documentContainerMain.BackgroundImageLayout = ImageLayout.Center;
             documentContainerMain.Name = "documentContainerMain";
             // 
             // 
@@ -131,47 +190,212 @@
             // ToolTabStripWebBrowser
             // 
             ToolTabStripWebBrowser.Controls.Add(ToolWindowWebBrowser);
-            ToolTabStripWebBrowser.Location = new Point(740, 5);
+            ToolTabStripWebBrowser.Location = new Point(964, 5);
             ToolTabStripWebBrowser.Name = "ToolTabStripWebBrowser";
             // 
             // 
             // 
             ToolTabStripWebBrowser.RootElement.MinSize = new Size(25, 25);
             ToolTabStripWebBrowser.SelectedIndex = 0;
-            ToolTabStripWebBrowser.Size = new Size(389, 719);
+            ToolTabStripWebBrowser.Size = new Size(389, 413);
             ToolTabStripWebBrowser.SizeInfo.AbsoluteSize = new Size(389, 200);
             ToolTabStripWebBrowser.SizeInfo.SplitterCorrection = new Size(189, 0);
             ToolTabStripWebBrowser.TabIndex = 2;
             ToolTabStripWebBrowser.TabStop = false;
             // 
-            // radPanelhEADER
+            // ToolWindowWebBrowser
             // 
-            radPanelhEADER.Dock = DockStyle.Top;
-            radPanelhEADER.Location = new Point(0, 0);
-            radPanelhEADER.Name = "radPanelhEADER";
-            radPanelhEADER.Size = new Size(1134, 47);
-            radPanelhEADER.TabIndex = 1;
+            ToolWindowWebBrowser.Caption = null;
+            ToolWindowWebBrowser.Controls.Add(radSplitContainer1);
+            ToolWindowWebBrowser.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ToolWindowWebBrowser.Location = new Point(1, 24);
+            ToolWindowWebBrowser.Name = "ToolWindowWebBrowser";
+            ToolWindowWebBrowser.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
+            ToolWindowWebBrowser.Size = new Size(387, 387);
+            ToolWindowWebBrowser.Text = "A3D What's App Web";
+            // 
+            // radSplitContainer1
+            // 
+            radSplitContainer1.Controls.Add(splitPanel1);
+            radSplitContainer1.Controls.Add(splitPanel2);
+            radSplitContainer1.Dock = DockStyle.Fill;
+            radSplitContainer1.IsCleanUpTarget = true;
+            radSplitContainer1.Location = new Point(0, 0);
+            radSplitContainer1.Name = "radSplitContainer1";
+            radSplitContainer1.Orientation = Orientation.Horizontal;
+            radSplitContainer1.Padding = new Padding(5);
+            // 
+            // 
+            // 
+            radSplitContainer1.RootElement.MinSize = new Size(25, 25);
+            radSplitContainer1.Size = new Size(387, 387);
+            radSplitContainer1.TabIndex = 1;
+            radSplitContainer1.TabStop = false;
+            // 
+            // splitPanel1
+            // 
+            splitPanel1.Controls.Add(radSplitContainer2);
+            splitPanel1.Location = new Point(0, 0);
+            splitPanel1.Name = "splitPanel1";
+            // 
+            // 
+            // 
+            splitPanel1.RootElement.MinSize = new Size(25, 25);
+            splitPanel1.Size = new Size(387, 163);
+            splitPanel1.SizeInfo.AutoSizeScale = new SizeF(0F, -0.07349399F);
+            splitPanel1.SizeInfo.SplitterCorrection = new Size(0, -26);
+            splitPanel1.TabIndex = 0;
+            splitPanel1.TabStop = false;
+            splitPanel1.Text = "splitPanel1";
+            // 
+            // radSplitContainer2
+            // 
+            radSplitContainer2.Controls.Add(splitPanel3);
+            radSplitContainer2.Controls.Add(splitPanel4);
+            radSplitContainer2.Dock = DockStyle.Fill;
+            radSplitContainer2.IsCleanUpTarget = true;
+            radSplitContainer2.Location = new Point(0, 0);
+            radSplitContainer2.Name = "radSplitContainer2";
+            radSplitContainer2.Padding = new Padding(5);
+            // 
+            // 
+            // 
+            radSplitContainer2.RootElement.MinSize = new Size(25, 25);
+            radSplitContainer2.Size = new Size(387, 163);
+            radSplitContainer2.TabIndex = 1;
+            radSplitContainer2.TabStop = false;
+            // 
+            // splitPanel3
+            // 
+            splitPanel3.Controls.Add(radPictureBox1);
+            splitPanel3.Location = new Point(0, 0);
+            splitPanel3.Name = "splitPanel3";
+            // 
+            // 
+            // 
+            splitPanel3.RootElement.MinSize = new Size(25, 25);
+            splitPanel3.Size = new Size(243, 163);
+            splitPanel3.SizeInfo.AutoSizeScale = new SizeF(0.134464741F, 0F);
+            splitPanel3.SizeInfo.SplitterCorrection = new Size(51, 0);
+            splitPanel3.TabIndex = 0;
+            splitPanel3.TabStop = false;
+            splitPanel3.Text = "splitPanel3";
+            // 
+            // radPictureBox1
+            // 
+            radPictureBox1.Dock = DockStyle.Fill;
+            radPictureBox1.Location = new Point(0, 0);
+            radPictureBox1.Name = "radPictureBox1";
+            radPictureBox1.Size = new Size(243, 163);
+            radPictureBox1.TabIndex = 0;
+            // 
+            // splitPanel4
+            // 
+            splitPanel4.Controls.Add(RadBtnLogout);
+            splitPanel4.Controls.Add(RadBtnLogin);
+            splitPanel4.Location = new Point(247, 0);
+            splitPanel4.Name = "splitPanel4";
+            // 
+            // 
+            // 
+            splitPanel4.RootElement.MinSize = new Size(25, 25);
+            splitPanel4.Size = new Size(140, 163);
+            splitPanel4.SizeInfo.AutoSizeScale = new SizeF(-0.134464741F, 0F);
+            splitPanel4.SizeInfo.SplitterCorrection = new Size(-51, 0);
+            splitPanel4.TabIndex = 1;
+            splitPanel4.TabStop = false;
+            splitPanel4.Text = "splitPanel4";
+            // 
+            // RadBtnLogout
+            // 
+            RadBtnLogout.Location = new Point(3, 56);
+            RadBtnLogout.Name = "RadBtnLogout";
+            RadBtnLogout.Size = new Size(104, 24);
+            RadBtnLogout.TabIndex = 1;
+            RadBtnLogout.Text = "Logout";
+            RadBtnLogout.Click += RadBtnLogout_Click;
+            // 
+            // RadBtnLogin
+            // 
+            RadBtnLogin.Location = new Point(2, 14);
+            RadBtnLogin.Name = "RadBtnLogin";
+            RadBtnLogin.Size = new Size(104, 24);
+            RadBtnLogin.TabIndex = 0;
+            RadBtnLogin.Text = "Login";
+            RadBtnLogin.Click += RadBtnLogin_Click;
+            // 
+            // splitPanel2
+            // 
+            splitPanel2.Controls.Add(RadTextBoxLog);
+            splitPanel2.Location = new Point(0, 167);
+            splitPanel2.Name = "splitPanel2";
+            // 
+            // 
+            // 
+            splitPanel2.RootElement.MinSize = new Size(25, 25);
+            splitPanel2.Size = new Size(387, 220);
+            splitPanel2.SizeInfo.AutoSizeScale = new SizeF(0F, 0.07349396F);
+            splitPanel2.SizeInfo.SplitterCorrection = new Size(0, 26);
+            splitPanel2.TabIndex = 1;
+            splitPanel2.TabStop = false;
+            splitPanel2.Text = "splitPanel2";
+            // 
+            // backgroundWorker1
+            // 
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+            backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
+            // 
+            // RadTextBoxLog
+            // 
+            RadTextBoxLog.Dock = DockStyle.Fill;
+            RadTextBoxLog.Location = new Point(0, 0);
+            RadTextBoxLog.Multiline = true;
+            RadTextBoxLog.Name = "RadTextBoxLog";
+            // 
+            // 
+            // 
+            RadTextBoxLog.RootElement.StretchVertically = true;
+            RadTextBoxLog.Size = new Size(387, 220);
+            RadTextBoxLog.TabIndex = 0;
             // 
             // FrmMainMDI
             // 
             AutoScaleBaseSize = new Size(7, 15);
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1134, 776);
+            ClientSize = new Size(1358, 423);
             Controls.Add(RdMainDock);
-            Controls.Add(radPanelhEADER);
             Name = "FrmMainMDI";
             Text = "FrmMainMDI";
+            FormClosing += FrmMainMDI_FormClosing;
+            Load += FrmMainMDI_Load;
             ((ISupportInitialize)RdMainDock).EndInit();
             RdMainDock.ResumeLayout(false);
-            ToolWindowWebBrowser.ResumeLayout(false);
-            ((ISupportInitialize)wVWhatsApp).EndInit();
+            ToolWindowMenu.ResumeLayout(false);
+            ((ISupportInitialize)RadTreeViewMenu).EndInit();
             ((ISupportInitialize)ToolTabStripMenu).EndInit();
             ToolTabStripMenu.ResumeLayout(false);
             ((ISupportInitialize)documentContainerMain).EndInit();
             ((ISupportInitialize)ToolTabStripWebBrowser).EndInit();
             ToolTabStripWebBrowser.ResumeLayout(false);
-            ((ISupportInitialize)radPanelhEADER).EndInit();
+            ToolWindowWebBrowser.ResumeLayout(false);
+            ((ISupportInitialize)radSplitContainer1).EndInit();
+            radSplitContainer1.ResumeLayout(false);
+            ((ISupportInitialize)splitPanel1).EndInit();
+            splitPanel1.ResumeLayout(false);
+            ((ISupportInitialize)radSplitContainer2).EndInit();
+            radSplitContainer2.ResumeLayout(false);
+            ((ISupportInitialize)splitPanel3).EndInit();
+            splitPanel3.ResumeLayout(false);
+            ((ISupportInitialize)radPictureBox1).EndInit();
+            ((ISupportInitialize)splitPanel4).EndInit();
+            splitPanel4.ResumeLayout(false);
+            ((ISupportInitialize)RadBtnLogout).EndInit();
+            ((ISupportInitialize)RadBtnLogin).EndInit();
+            ((ISupportInitialize)splitPanel2).EndInit();
+            splitPanel2.ResumeLayout(false);
+            splitPanel2.PerformLayout();
+            ((ISupportInitialize)RadTextBoxLog).EndInit();
             ((ISupportInitialize)this).EndInit();
             ResumeLayout(false);
         }
@@ -184,7 +408,18 @@
         private Telerik.WinControls.UI.Docking.DocumentContainer documentContainerMain;
         private Telerik.WinControls.UI.Docking.ToolTabStrip ToolTabStripWebBrowser;
         private Telerik.WinControls.UI.Docking.ToolWindow ToolWindowWebBrowser;
-        private RadPanel radPanelhEADER;
-        private Microsoft.Web.WebView2.WinForms.WebView2 wVWhatsApp;
+        private RadTreeView RadTreeViewMenu;
+        private ImageList imageList1;
+        private RadPictureBox radPictureBox1;
+        private BackgroundWorker backgroundWorker1;
+        private RadSplitContainer radSplitContainer1;
+        private SplitPanel splitPanel1;
+        private RadSplitContainer radSplitContainer2;
+        private SplitPanel splitPanel3;
+        private SplitPanel splitPanel4;
+        private SplitPanel splitPanel2;
+        private RadButton RadBtnLogin;
+        private RadButton RadBtnLogout;
+        private RadTextBox RadTextBoxLog;
     }
 }
