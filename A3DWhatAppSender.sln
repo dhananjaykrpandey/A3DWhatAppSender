@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A3DWhatAppSender", "A3DWhatAppSender\A3DWhatAppSender.csproj", "{FEF4E3FF-32EF-43FF-B38C-9F18A94B9A91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEF4E3FF-32EF-43FF-B38C-9F18A94B9A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF4E3FF-32EF-43FF-B38C-9F18A94B9A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF4E3FF-32EF-43FF-B38C-9F18A94B9A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF4E3FF-32EF-43FF-B38C-9F18A94B9A91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EF4EDF3-0C92-44E8-A757-FEA690141CC3}
+	EndGlobalSection
+EndGlobal

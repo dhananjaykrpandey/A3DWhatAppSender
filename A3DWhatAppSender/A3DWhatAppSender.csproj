@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.1" />
+    <PackageReference Include="LiteDB" Version="5.0.17" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2088.41" />
+    <PackageReference Include="UI.for.WinForms.AllControls.NetCore" Version="2023.1.117" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Classes\Commom\" />
+  </ItemGroup>
+
+</Project>
