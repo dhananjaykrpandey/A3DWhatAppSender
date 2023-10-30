@@ -47,7 +47,7 @@
             AutoScaleBaseSize = new Size(7, 15);
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(836, 354);
+            ClientSize = new Size(820, 460);
             Controls.Add(RadBtnSend);
             Name = "FrmSendMessage";
             Text = "FrmSendMessage";

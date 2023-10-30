@@ -94,8 +94,8 @@ namespace A3DWhatAppSender
         {
             radPictureBox1.Image = qrbmp;
             RadTextBoxLog.Invoke(() => RadTextBoxLog.AppendText("please scan the QR code using your Whatsapp mobile app to continue login."));
-        
-        ClsMessage._IClsMessage.showMessage("please scan the QR code using your Whatsapp mobile app to continue login.");
+
+            ClsMessage._IClsMessage.showMessage("please scan the QR code using your Whatsapp mobile app to continue login.");
         }
         public RadForm TryGetFormByName(string frmname)
         {

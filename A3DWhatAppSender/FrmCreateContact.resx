@@ -117,4 +117,214 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="commandBarButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACkSURBVDhPtZJdCsIwEIRTRfQCXsiHXqZH8c6J+4UJpOkm
+        DagfDGz3ZzIPDTOklK5In98RY9xqqb3D+neVY0iFyfP1TojaS2r9VeWYWUPrPVT6cFTkGRZpnf2byiMc
+        taoNW3HTNbTBwlIxOBO7SnuRxR6GPzUEllrVBq24McMlH/fQq1kcOYmytO5jC4dXeoYaj/mHoftzYlJL
+        7XO8hAVSzSUL4QN+2VFT0X26dAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="commandBarButton5.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="20" height="14" viewBox="0, 0, 20, 14" id="Layer_1" data-name="Layer 1" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      .cls-1 {
+        fill: #fff;
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        fill: #1e4489;
+      }
+    &lt;/style&gt;
+  &lt;/defs&gt;
+  &lt;g&gt;
+    &lt;polygon points="16,5 12,5 12,1 8,1 8,5 4,5 4,9 8,9 8,13 12,13 12,9 16,9 16,5" opacity="0.5" class="cls-1" style="fill:white;" /&gt;
+    &lt;polygon points="15,6 11,6 11,2 9,2 9,6 5,6 5,8 9,8 9,12 11,12 11,8 15,8 15,6" class="cls-2" style="fill:#1E4489;" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="commandBarButton8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADaSURBVDhPrZE7CsMwEER9pBwjx8iRfASVKdXkU6qz
+        yy1dCtykVJlus2NiE7xrE3s98BAMzENCFTMfjll6MUsvZunFLGPKrCGOT+IQiR9Nz/emr26CtTdLSJYS
+        rolP5wukvFFKctipRZpaGsQiRaX2qgB45lLqEAfhiETtVQHCihSBeJRL1F4VAJ+xlPIWStkjTXIY+Qrz
+        a49UPsMKbglhzjuk+OF5xmdDSt0eqQzmEd90S+qyXzrdchAWTuSV/j4bUhGm1iHFucZmKQb/MN8CVRyB
+        WXoxSx9cfQCSrFXAhaG4yAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="commandBarButton7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADaSURBVDhPrZE7CsMwEER9pBwjx8iRfASVKdXkU6qz
+        yy1dCtykVJlus2NiE7xrE3s98BAMzENCFTMfjll6MUsvZunFLGPKrCGOT+IQiR9Nz/emr26CtTdLSJYS
+        rolP5wukvFFKctipRZpaGsQiRaX2qgB45lLqEAfhiETtVQHCihSBeJRL1F4VAJ+xlPIWStkjTXIY+Qrz
+        a49UPsMKbglhzjuk+OF5xmdDSt0eqQzmEd90S+qyXzrdchAWTuSV/j4bUhGm1iHFucZmKQb/MN8CVRyB
+        WXoxSx9cfQCSrFXAhaG4yAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="commandBarButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAALCAYAAACQy8Z9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVDhPY8AG/v//zwhlMii4t5aJOnX/h2GoMAoAqmeG
+        MnEDZEOJAUSpBylCdh0uDFVOHCDVpUQBmKHYXAfDYIWkAGRD8dEkgRFuKAwQMhRmOUkApBkXBskDDZUA
+        K0QBDAwAVsh+0N/AZPcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="commandBarButton6.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="21" height="11" viewBox="0, 0, 21, 11" id="Layer_1" data-name="Layer 1" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      .cls-1 {
+        fill: #1e4489;
+      }
+    &lt;/style&gt;
+  &lt;/defs&gt;
+  &lt;g&gt;
+    &lt;rect x="9" width="3" height="1" class="cls-1" style="fill:#1E4489;" /&gt;
+    &lt;rect x="6" y="2" width="9" height="1" class="cls-1" style="fill:#1E4489;" /&gt;
+    &lt;path d="M12 4 L7 4 L7 11 L14 11 L14 4 L12 4 z M9 10 L8 10 L8 5 L9 5 z M11 10 L10 10 L10 5 L11 5 z M13 10 L12 10 L12 5 L13 5 z" class="cls-1" style="fill:#1E4489;" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="commandBarButton9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADaSURBVDhPrZE7CsMwEER9pBwjx8iRfASVKdXkU6qz
+        yy1dCtykVJlus2NiE7xrE3s98BAMzENCFTMfjll6MUsvZunFLGPKrCGOT+IQiR9Nz/emr26CtTdLSJYS
+        rolP5wukvFFKctipRZpaGsQiRaX2qgB45lLqEAfhiETtVQHCihSBeJRL1F4VAJ+xlPIWStkjTXIY+Qrz
+        a49UPsMKbglhzjuk+OF5xmdDSt0eqQzmEd90S+qyXzrdchAWTuSV/j4bUhGm1iHFucZmKQb/MN8CVRyB
+        WXoxSx9cfQCSrFXAhaG4yAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="commandBarButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVChTlZFBDoAgDATxYHyBH/J7fo1XePburdptWrIS
+        iTAJoV3ocCD9sW777WUBmTJ7a2g/edkGg7Uwsi4BE4Ms5GxIyINYX1m3EBeP88o8jLzOhoTYWWAHCmfd
+        QiYE3hqRKa9fblK/DIGXBWQisnhLpPQA+rR8nKyJyacAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="commandBarButton1.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="20" height="8" viewBox="0, 0, 20, 8" id="Layer_1" data-name="Layer 1" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      .cls-1 {
+        fill: #f2f9ff;
+        opacity: 0.8;
+      }
+
+      .cls-2 {
+        fill: #15428b;
+      }
+    &lt;/style&gt;
+  &lt;/defs&gt;
+  &lt;g&gt;
+    &lt;polygon points="9,1 5,4.5 9,8 9,1" opacity="0.8" class="cls-1" style="fill:#F2F9FF;" /&gt;
+    &lt;polygon points="9,0 5,3.5 9,7 9,0" class="cls-2" style="fill:#15428B;" /&gt;
+  &lt;/g&gt;
+  &lt;g&gt;
+    &lt;polygon points="14,1 10,4.5 14,8 14,1" opacity="0.8" class="cls-1" style="fill:#F2F9FF;" /&gt;
+    &lt;polygon points="14,0 10,3.5 14,7 14,0" class="cls-2" style="fill:#15428B;" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="commandBarButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVChTYyAFiDp1/wcCRiiXAZlNMgAZhm4g2QBmGFUM
+        RDaMKgY+evP9DFkGYlMIE0M2lCoGggDMUHR1QD4rlEkYABUzQZlgADIUi4EcCHUMDABLxV9Ac1I2vQAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="commandBarButton2.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="20" height="8" viewBox="0, 0, 20, 8" id="Layer_1" data-name="Layer 1" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      .cls-1 {
+        fill: #f2f9ff;
+        opacity: 0.8;
+      }
+
+      .cls-2 {
+        fill: #15428b;
+      }
+    &lt;/style&gt;
+  &lt;/defs&gt;
+  &lt;g&gt;
+    &lt;polygon points="12,1 8,4.5 12,8 12,1" opacity="0.8" class="cls-1" style="fill:#F2F9FF;" /&gt;
+    &lt;polygon points="12,0 8,3.5 12,7 12,0" class="cls-2" style="fill:#15428B;" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="commandBarButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABVSURBVChTY8AH/v//zyTq1P0fyqUcAA1kBBlINUORDYQZ
+        CnI1WJJcgGwgCAMBM1SKPIBs2KM3389QzUCQYSA+VQyEGQYCFIchsmEgADSQEcrEAhgYAE8dR0w6C1Zv
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="commandBarButton3.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="20" height="8" viewBox="0, 0, 20, 8" id="Layer_1" data-name="Layer 1" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      .cls-1 {
+        fill: #f2f9ff;
+        opacity: 0.8;
+      }
+
+      .cls-2 {
+        fill: #15428b;
+      }
+    &lt;/style&gt;
+  &lt;/defs&gt;
+  &lt;g&gt;
+    &lt;polygon points="8,1 12,4.5 8,8 8,1" opacity="0.8" class="cls-1" style="fill:#F2F9FF;" /&gt;
+    &lt;polygon points="8,0 12,3.5 8,7 8,0" class="cls-2" style="fill:#15428B;" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="commandBarButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABtSURBVChTY0AH//79ExZ16v4P5cIButj///8ZoUz8AGig
+        EEgzugHoYkQbCFSoANOMbAA2MaIA0EB+ZM0wA7CJEQWABrIia3z05vsZkDg2MaIA0EBmbBrJMgwEQIGN
+        TSNZhoEAyEBsGokzjIEBAKJQduUtrUjoAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="commandBarButton4.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="20" height="8" viewBox="0, 0, 20, 8" id="Layer_1" data-name="Layer 1" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;defs&gt;
+    &lt;style&gt;
+      .cls-1 {
+        fill: #f2f9ff;
+        opacity: 0.8;
+      }
+
+      .cls-2 {
+        fill: #15428b;
+      }
+    &lt;/style&gt;
+  &lt;/defs&gt;
+  &lt;g&gt;
+    &lt;polygon points="10,1 14,4.5 10,8 10,1" opacity="0.8" class="cls-1" style="fill:#F2F9FF;" /&gt;
+    &lt;polygon points="10,0 14,3.5 10,7 10,0" class="cls-2" style="fill:#15428B;" /&gt;
+  &lt;/g&gt;
+  &lt;g&gt;
+    &lt;polygon points="5,1 9,4.5 5,8 5,1" opacity="0.8" class="cls-1" style="fill:#F2F9FF;" /&gt;
+    &lt;polygon points="5,0 9,3.5 5,7 5,0" class="cls-2" style="fill:#15428B;" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</value>
+  </data>
 </root>
