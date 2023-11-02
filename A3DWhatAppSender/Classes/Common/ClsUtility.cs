@@ -34,6 +34,7 @@ namespace A3DWhatAppSender.Classes.Common
             }
 
         }
+        
 
         public Form IsFormAlreadyOpen(Form frm)
         {

@@ -37,6 +37,9 @@ namespace A3DWhatAppSender
             ToolWindowWebBrowser.Close();
             RadBtnLogout.Enabled = false;
             RadBtnLogin.Enabled = false;
+
+            Icon = System.Drawing.Icon.FromHandle(A3DFontAwesome.IconChar.Whatsapp.ToBitmap(Color.FromArgb(32, 233, 87), 48).GetHicon());
+            Text = ClsMessage._IClsMessage.ProjectName;
         }
 
         private void FrmMainMDI_Load(object sender, EventArgs e)
@@ -74,11 +77,11 @@ namespace A3DWhatAppSender
                     //string Url = $"https://web.whatsapp.com/send?phone={number}&text={HttpUtility.UrlEncode(message)}&type=phone_number&app_absent=1";
                     //wVWhatsApp.CoreWebView2.Navigate (Url);
                     //wVWhatsApp.ExecuteScriptAsync("document.getElementsByName('send')[0].click();");
-                    RadTextBoxLog.AppendText("starting driver...");
+                    RadTextBoxLog.AppendText("starting driver..." + Environment.NewLine);
                     ToolWindowWebBrowser.Show();
                     ClsUtility._IClsUtility._gMessenger = new Messenger(false);
                     ClsUtility._IClsUtility._gMessenger.IsLogin = false;
-                    RadTextBoxLog.AppendText("driver started.");
+                    RadTextBoxLog.AppendText("driver started." + Environment.NewLine);
                     ClsUtility._IClsUtility._gMessenger.OnQRReady += Messenger_OnQRReady;
                     RadBtnLogin.Enabled = true;
                 }
@@ -93,9 +96,9 @@ namespace A3DWhatAppSender
         private void Messenger_OnQRReady(Image qrbmp)
         {
             radPictureBox1.Image = qrbmp;
-            RadTextBoxLog.Invoke(() => RadTextBoxLog.AppendText("please scan the QR code using your Whatsapp mobile app to continue login."));
+            RadTextBoxLog.Invoke(() => RadTextBoxLog.AppendText("please scan the QR code using your Whatsapp mobile app to continue login." + Environment.NewLine));
 
-            ClsMessage._IClsMessage.showMessage("please scan the QR code using your Whatsapp mobile app to continue login.");
+            ClsMessage._IClsMessage.showMessage("please scan the QR code using your Whatsapp mobile app to continue login." + Environment.NewLine);
         }
         public RadForm TryGetFormByName(string frmname)
         {

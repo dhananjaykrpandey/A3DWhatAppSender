@@ -99,7 +99,7 @@
             // 
             // 
             RdMainDock.RootElement.MinSize = new Size(25, 25);
-            RdMainDock.Size = new Size(846, 375);
+            RdMainDock.Size = new Size(1117, 512);
             RdMainDock.TabIndex = 0;
             RdMainDock.TabStop = false;
             // 
@@ -111,7 +111,7 @@
             ToolWindowMenu.Location = new Point(1, 24);
             ToolWindowMenu.Name = "ToolWindowMenu";
             ToolWindowMenu.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            ToolWindowMenu.Size = new Size(198, 339);
+            ToolWindowMenu.Size = new Size(198, 476);
             ToolWindowMenu.Text = "A3D What's App Sender";
             // 
             // RadTreeViewMenu
@@ -148,7 +148,7 @@
             RadTreeViewMenu.RightToLeft = RightToLeft.No;
             RadTreeViewMenu.ShowLines = true;
             RadTreeViewMenu.ShowNodeToolTips = true;
-            RadTreeViewMenu.Size = new Size(198, 339);
+            RadTreeViewMenu.Size = new Size(198, 476);
             RadTreeViewMenu.SpacingBetweenNodes = -1;
             RadTreeViewMenu.TabIndex = 0;
             RadTreeViewMenu.NodeMouseDoubleClick += RadTreeViewMenu_NodeMouseDoubleClick;
@@ -169,7 +169,7 @@
             // 
             ToolTabStripMenu.RootElement.MinSize = new Size(25, 25);
             ToolTabStripMenu.SelectedIndex = 0;
-            ToolTabStripMenu.Size = new Size(200, 365);
+            ToolTabStripMenu.Size = new Size(200, 502);
             ToolTabStripMenu.SizeInfo.AutoSizeScale = new SizeF(-0.2596154F, 0F);
             ToolTabStripMenu.TabIndex = 1;
             ToolTabStripMenu.TabStop = false;
@@ -190,14 +190,14 @@
             // ToolTabStripWebBrowser
             // 
             ToolTabStripWebBrowser.Controls.Add(ToolWindowWebBrowser);
-            ToolTabStripWebBrowser.Location = new Point(571, 5);
+            ToolTabStripWebBrowser.Location = new Point(842, 5);
             ToolTabStripWebBrowser.Name = "ToolTabStripWebBrowser";
             // 
             // 
             // 
             ToolTabStripWebBrowser.RootElement.MinSize = new Size(25, 25);
             ToolTabStripWebBrowser.SelectedIndex = 0;
-            ToolTabStripWebBrowser.Size = new Size(270, 365);
+            ToolTabStripWebBrowser.Size = new Size(270, 502);
             ToolTabStripWebBrowser.SizeInfo.AbsoluteSize = new Size(270, 200);
             ToolTabStripWebBrowser.SizeInfo.SplitterCorrection = new Size(70, 0);
             ToolTabStripWebBrowser.TabIndex = 2;
@@ -211,7 +211,7 @@
             ToolWindowWebBrowser.Location = new Point(1, 24);
             ToolWindowWebBrowser.Name = "ToolWindowWebBrowser";
             ToolWindowWebBrowser.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            ToolWindowWebBrowser.Size = new Size(268, 339);
+            ToolWindowWebBrowser.Size = new Size(268, 476);
             ToolWindowWebBrowser.Text = "A3D What's App Web";
             // 
             // radSplitContainer1
@@ -228,7 +228,7 @@
             // 
             // 
             radSplitContainer1.RootElement.MinSize = new Size(25, 25);
-            radSplitContainer1.Size = new Size(268, 339);
+            radSplitContainer1.Size = new Size(268, 476);
             radSplitContainer1.TabIndex = 1;
             radSplitContainer1.TabStop = false;
             // 
@@ -241,9 +241,9 @@
             // 
             // 
             splitPanel1.RootElement.MinSize = new Size(25, 25);
-            splitPanel1.Size = new Size(268, 143);
-            splitPanel1.SizeInfo.AutoSizeScale = new SizeF(0F, -0.07349399F);
-            splitPanel1.SizeInfo.SplitterCorrection = new Size(0, -26);
+            splitPanel1.Size = new Size(268, 128);
+            splitPanel1.SizeInfo.AutoSizeScale = new SizeF(0F, -0.229372948F);
+            splitPanel1.SizeInfo.SplitterCorrection = new Size(0, -73);
             splitPanel1.TabIndex = 0;
             splitPanel1.TabStop = false;
             splitPanel1.Text = "splitPanel1";
@@ -261,7 +261,7 @@
             // 
             // 
             radSplitContainer2.RootElement.MinSize = new Size(25, 25);
-            radSplitContainer2.Size = new Size(268, 143);
+            radSplitContainer2.Size = new Size(268, 128);
             radSplitContainer2.TabIndex = 1;
             radSplitContainer2.TabStop = false;
             // 
@@ -274,7 +274,7 @@
             // 
             // 
             splitPanel3.RootElement.MinSize = new Size(25, 25);
-            splitPanel3.Size = new Size(167, 143);
+            splitPanel3.Size = new Size(167, 128);
             splitPanel3.SizeInfo.AutoSizeScale = new SizeF(0.134464741F, 0F);
             splitPanel3.SizeInfo.SplitterCorrection = new Size(51, 0);
             splitPanel3.TabIndex = 0;
@@ -286,7 +286,7 @@
             radPictureBox1.Dock = DockStyle.Fill;
             radPictureBox1.Location = new Point(0, 0);
             radPictureBox1.Name = "radPictureBox1";
-            radPictureBox1.Size = new Size(167, 143);
+            radPictureBox1.Size = new Size(167, 128);
             radPictureBox1.TabIndex = 0;
             // 
             // splitPanel4
@@ -299,7 +299,7 @@
             // 
             // 
             splitPanel4.RootElement.MinSize = new Size(25, 25);
-            splitPanel4.Size = new Size(97, 143);
+            splitPanel4.Size = new Size(97, 128);
             splitPanel4.SizeInfo.AutoSizeScale = new SizeF(-0.134464741F, 0F);
             splitPanel4.SizeInfo.SplitterCorrection = new Size(-51, 0);
             splitPanel4.TabIndex = 1;
@@ -327,15 +327,15 @@
             // splitPanel2
             // 
             splitPanel2.Controls.Add(RadTextBoxLog);
-            splitPanel2.Location = new Point(0, 147);
+            splitPanel2.Location = new Point(0, 132);
             splitPanel2.Name = "splitPanel2";
             // 
             // 
             // 
             splitPanel2.RootElement.MinSize = new Size(25, 25);
-            splitPanel2.Size = new Size(268, 192);
-            splitPanel2.SizeInfo.AutoSizeScale = new SizeF(0F, 0.07349396F);
-            splitPanel2.SizeInfo.SplitterCorrection = new Size(0, 26);
+            splitPanel2.Size = new Size(268, 344);
+            splitPanel2.SizeInfo.AutoSizeScale = new SizeF(0F, 0.229372919F);
+            splitPanel2.SizeInfo.SplitterCorrection = new Size(0, 73);
             splitPanel2.TabIndex = 1;
             splitPanel2.TabStop = false;
             splitPanel2.Text = "splitPanel2";
@@ -350,7 +350,7 @@
             // 
             // 
             RadTextBoxLog.RootElement.StretchVertically = true;
-            RadTextBoxLog.Size = new Size(268, 192);
+            RadTextBoxLog.Size = new Size(268, 344);
             RadTextBoxLog.TabIndex = 0;
             // 
             // backgroundWorker1
@@ -363,10 +363,11 @@
             AutoScaleBaseSize = new Size(7, 15);
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(846, 375);
+            ClientSize = new Size(1117, 512);
             Controls.Add(RdMainDock);
             Name = "FrmMainMDI";
             Text = "FrmMainMDI";
+            WindowState = FormWindowState.Maximized;
             FormClosing += FrmMainMDI_FormClosing;
             Load += FrmMainMDI_Load;
             ((ISupportInitialize)RdMainDock).EndInit();

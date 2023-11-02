@@ -24,15 +24,15 @@ namespace A3DWhatAppSender.Classes.Common
 
         }
 
-        public readonly string ProjectName = "A3D Bhav-Copy Analysis System";
+        public readonly string ProjectName = "A3D What's App Message Sender System";
 
-        public void showMessage(string msg, MessageBoxIcon Icon = MessageBoxIcon.Information)
+        public void showMessage(string msg, RadMessageIcon Icon = RadMessageIcon.Info)
         {
-            MessageBox.Show(msg, ProjectName, MessageBoxButtons.OK, Icon);
+           RadMessageBox.Show(msg, ProjectName, MessageBoxButtons.OK, Icon);
         }
         public void ProjectExceptionMessage(string msg)
         {
-            MessageBox.Show(msg, ProjectName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            RadMessageBox.Show(msg, ProjectName, MessageBoxButtons.OK, RadMessageIcon.Error);
         }
         public void ProjectExceptionMessage(Exception msg)
         {
@@ -41,31 +41,31 @@ namespace A3DWhatAppSender.Classes.Common
             {
                 innerex = msg.InnerException.ToString();
             }
-            MessageBox.Show(msg + Environment.NewLine + innerex, ProjectName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            RadMessageBox.Show(msg + Environment.NewLine + innerex, ProjectName, MessageBoxButtons.OK, RadMessageIcon.Error);
         }
         public DialogResult showQuestionMessage(string msg)
         {
-            return MessageBox.Show(msg, ProjectName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return RadMessageBox.Show(msg, ProjectName, MessageBoxButtons.YesNo, RadMessageIcon.Question);
         }
         public void showSaveMessage()
         {
-            MessageBox.Show("Record save successfully!", ProjectName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            RadMessageBox.Show("Record save successfully!", ProjectName, MessageBoxButtons.OK, RadMessageIcon.Info);
         }
         public void showDeleteMessage()
         {
-            MessageBox.Show("Record deleted successfully!", ProjectName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            RadMessageBox.Show("Record deleted successfully!", ProjectName, MessageBoxButtons.OK, RadMessageIcon.Info);
         }
         public DialogResult showAskDeleteMessage()
         {
-            return MessageBox.Show("Are you sure want to delete this record?", ProjectName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return RadMessageBox.Show("Are you sure want to delete this record?", ProjectName, MessageBoxButtons.YesNo, RadMessageIcon.Question);
         }
         public DialogResult showAskExitMessage()
         {
-            return MessageBox.Show("Are you sure want to exit?", ProjectName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return RadMessageBox.Show("Are you sure want to exit?", ProjectName, MessageBoxButtons.YesNo, RadMessageIcon.Question);
         }
         public DialogResult showAskDiscardMessage()
         {
-            return MessageBox.Show("Are you sure want to discard changes?", ProjectName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return RadMessageBox.Show("Are you sure want to discard changes?", ProjectName, MessageBoxButtons.YesNo,RadMessageIcon.Question);
         }
     }
 }
