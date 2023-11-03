@@ -32,8 +32,8 @@ namespace A3DWhatAppSender
             imageList1.Images.Add(A3DFontAwesome.IconChar.SignIn.ToBitmap(color: Color.FromArgb(127, 0, 51), 36));
             imageList1.Images.Add(A3DFontAwesome.IconChar.UserAlt.ToBitmap(color: Color.DarkOliveGreen, 36));
             imageList1.Images.Add(A3DFontAwesome.IconChar.Users.ToBitmap(color: Color.RebeccaPurple, 36));
-            imageList1.Images.Add(A3DFontAwesome.IconChar.MailBulk.ToBitmap(color: Color.Purple, 36));
-
+            imageList1.Images.Add(A3DFontAwesome.IconChar.MailBulk.ToBitmap(color: Color.FromArgb(208, 47, 87), 36));
+            imageList1.Images.Add(A3DFontAwesome.IconChar.PeopleGroup.ToBitmap(color: Color.FromArgb(27, 148, 11), 36));
             ToolWindowWebBrowser.Close();
             RadBtnLogout.Enabled = false;
             RadBtnLogin.Enabled = false;

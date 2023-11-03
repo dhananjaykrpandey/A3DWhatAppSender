@@ -31,15 +31,15 @@ namespace A3DWhatAppSender
         private void InitializeComponent()
         {
             components = new Container();
-            GridViewTextBoxColumn gridViewTextBoxColumn6 = new GridViewTextBoxColumn();
-            GridViewTextBoxColumn gridViewTextBoxColumn7 = new GridViewTextBoxColumn();
-            GridViewTextBoxColumn gridViewTextBoxColumn8 = new GridViewTextBoxColumn();
-            GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new GridViewCheckBoxColumn();
-            GridViewTextBoxColumn gridViewTextBoxColumn9 = new GridViewTextBoxColumn();
-            GridViewTextBoxColumn gridViewTextBoxColumn10 = new GridViewTextBoxColumn();
-            TableViewDefinition tableViewDefinition2 = new TableViewDefinition();
-            RadValidationRule radValidationRule3 = new RadValidationRule();
-            RadValidationRule radValidationRule4 = new RadValidationRule();
+            GridViewTextBoxColumn gridViewTextBoxColumn1 = new GridViewTextBoxColumn();
+            GridViewTextBoxColumn gridViewTextBoxColumn2 = new GridViewTextBoxColumn();
+            GridViewTextBoxColumn gridViewTextBoxColumn3 = new GridViewTextBoxColumn();
+            GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new GridViewCheckBoxColumn();
+            GridViewTextBoxColumn gridViewTextBoxColumn4 = new GridViewTextBoxColumn();
+            GridViewTextBoxColumn gridViewTextBoxColumn5 = new GridViewTextBoxColumn();
+            TableViewDefinition tableViewDefinition1 = new TableViewDefinition();
+            RadValidationRule radValidationRule1 = new RadValidationRule();
+            RadValidationRule radValidationRule2 = new RadValidationRule();
             ComponentResourceManager resources = new ComponentResourceManager(typeof(FrmCreateContact));
             RdTxtName = new RadTextBox();
             RdTxtPhoneno = new RadTextBox();
@@ -67,8 +67,9 @@ namespace A3DWhatAppSender
             CmdBarBtnDelete = new CommandBarButton();
             CmdBarBtnUndo = new CommandBarButton();
             commandBarSeparator2 = new CommandBarSeparator();
-            CmbBarBtnUploadExcel = new CommandBarButton();
             CmdBarBtnRefresh = new CommandBarButton();
+            CmdBarBtnUploadExcel = new CommandBarButton();
+            CmdBarBtnExport = new CommandBarButton();
             CmdBar = new RadCommandBar();
             ((ISupportInitialize)RdTxtName).BeginInit();
             ((ISupportInitialize)RdTxtPhoneno).BeginInit();
@@ -101,7 +102,7 @@ namespace A3DWhatAppSender
             RdTxtName.NullText = "Enter contact person name";
             RdTxtName.Size = new Size(389, 20);
             RdTxtName.TabIndex = 1;
-            radValidationProvider1.SetValidationRule(RdTxtName, radValidationRule3);
+            radValidationProvider1.SetValidationRule(RdTxtName, radValidationRule1);
             // 
             // RdTxtPhoneno
             // 
@@ -111,11 +112,7 @@ namespace A3DWhatAppSender
             RdTxtPhoneno.NullText = "Enter contact person mobile/phone number";
             RdTxtPhoneno.Size = new Size(389, 20);
             RdTxtPhoneno.TabIndex = 2;
-            radValidationProvider1.SetValidationRule(RdTxtPhoneno, radValidationRule4);
-            // 
-            // contactDetailsBindingSource
-            // 
-            contactDetailsBindingSource.DataSource = typeof(Classes.Model.ContactDetails);
+            radValidationProvider1.SetValidationRule(RdTxtPhoneno, radValidationRule2);
             // 
             // RdGridViewList
             // 
@@ -134,47 +131,47 @@ namespace A3DWhatAppSender
             RdGridViewList.MasterTemplate.AllowDeleteRow = false;
             RdGridViewList.MasterTemplate.AllowEditRow = false;
             RdGridViewList.MasterTemplate.AllowSearchRow = true;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "Id";
-            gridViewTextBoxColumn6.HeaderText = "ID";
-            gridViewTextBoxColumn6.IsVisible = false;
-            gridViewTextBoxColumn6.Name = "Id";
-            gridViewTextBoxColumn6.Width = 19;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "Name";
-            gridViewTextBoxColumn7.HeaderText = "Full Name";
-            gridViewTextBoxColumn7.Name = "Name";
-            gridViewTextBoxColumn7.Width = 262;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "ContactPhone";
-            gridViewTextBoxColumn8.HeaderText = "Contact Phone";
-            gridViewTextBoxColumn8.Name = "ContactPhone";
-            gridViewTextBoxColumn8.Width = 155;
-            gridViewCheckBoxColumn2.EnableExpressionEditor = false;
-            gridViewCheckBoxColumn2.FieldName = "IsActive";
-            gridViewCheckBoxColumn2.HeaderText = "Is Active";
-            gridViewCheckBoxColumn2.HeaderTextAlignment = ContentAlignment.MiddleRight;
-            gridViewCheckBoxColumn2.MinWidth = 20;
-            gridViewCheckBoxColumn2.Name = "IsActive";
-            gridViewCheckBoxColumn2.ReadOnly = true;
-            gridViewCheckBoxColumn2.Width = 65;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "GroupName";
-            gridViewTextBoxColumn9.HeaderText = "Group Name";
-            gridViewTextBoxColumn9.Name = "GroupName";
-            gridViewTextBoxColumn9.Width = 239;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "ContactEmail";
-            gridViewTextBoxColumn10.HeaderText = "Contact Email";
-            gridViewTextBoxColumn10.Name = "ContactEmail";
-            RdGridViewList.MasterTemplate.Columns.AddRange(new GridViewDataColumn[] { gridViewTextBoxColumn6, gridViewTextBoxColumn7, gridViewTextBoxColumn8, gridViewCheckBoxColumn2, gridViewTextBoxColumn9, gridViewTextBoxColumn10 });
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Id";
+            gridViewTextBoxColumn1.HeaderText = "ID";
+            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.Name = "Id";
+            gridViewTextBoxColumn1.Width = 19;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Name";
+            gridViewTextBoxColumn2.HeaderText = "Full Name";
+            gridViewTextBoxColumn2.Name = "Name";
+            gridViewTextBoxColumn2.Width = 262;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "ContactPhone";
+            gridViewTextBoxColumn3.HeaderText = "Contact Phone";
+            gridViewTextBoxColumn3.Name = "ContactPhone";
+            gridViewTextBoxColumn3.Width = 155;
+            gridViewCheckBoxColumn1.EnableExpressionEditor = false;
+            gridViewCheckBoxColumn1.FieldName = "IsActive";
+            gridViewCheckBoxColumn1.HeaderText = "Is Active";
+            gridViewCheckBoxColumn1.HeaderTextAlignment = ContentAlignment.MiddleRight;
+            gridViewCheckBoxColumn1.MinWidth = 20;
+            gridViewCheckBoxColumn1.Name = "IsActive";
+            gridViewCheckBoxColumn1.ReadOnly = true;
+            gridViewCheckBoxColumn1.Width = 65;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "GroupName";
+            gridViewTextBoxColumn4.HeaderText = "Group Name";
+            gridViewTextBoxColumn4.Name = "GroupName";
+            gridViewTextBoxColumn4.Width = 239;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "ContactEmail";
+            gridViewTextBoxColumn5.HeaderText = "Contact Email";
+            gridViewTextBoxColumn5.Name = "ContactEmail";
+            RdGridViewList.MasterTemplate.Columns.AddRange(new GridViewDataColumn[] { gridViewTextBoxColumn1, gridViewTextBoxColumn2, gridViewTextBoxColumn3, gridViewCheckBoxColumn1, gridViewTextBoxColumn4, gridViewTextBoxColumn5 });
             RdGridViewList.MasterTemplate.EnableAlternatingRowColor = true;
             RdGridViewList.MasterTemplate.EnableCustomFiltering = true;
             RdGridViewList.MasterTemplate.EnableFiltering = true;
-            RdGridViewList.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            RdGridViewList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             RdGridViewList.Name = "RdGridViewList";
             RdGridViewList.RightToLeft = RightToLeft.No;
-            RdGridViewList.Size = new Size(723, 450);
+            RdGridViewList.Size = new Size(905, 102);
             RdGridViewList.TabIndex = 2;
             // 
             // RadPageView
@@ -184,8 +181,8 @@ namespace A3DWhatAppSender
             RadPageView.Dock = DockStyle.Fill;
             RadPageView.Location = new Point(0, 30);
             RadPageView.Name = "RadPageView";
-            RadPageView.SelectedPage = RadPageViewPageEntry;
-            RadPageView.Size = new Size(744, 498);
+            RadPageView.SelectedPage = RadPageViewPageList;
+            RadPageView.Size = new Size(926, 150);
             RadPageView.TabIndex = 1;
             ((RadPageViewStripElement)RadPageView.GetChildAt(0)).StripButtons = StripViewButtons.None;
             // 
@@ -195,7 +192,7 @@ namespace A3DWhatAppSender
             RadPageViewPageList.ItemSize = new SizeF(125F, 28F);
             RadPageViewPageList.Location = new Point(10, 37);
             RadPageViewPageList.Name = "RadPageViewPageList";
-            RadPageViewPageList.Size = new Size(723, 450);
+            RadPageViewPageList.Size = new Size(905, 102);
             RadPageViewPageList.Text = "RadPageViewPageList";
             // 
             // RadPageViewPageEntry
@@ -214,7 +211,7 @@ namespace A3DWhatAppSender
             RadPageViewPageEntry.ItemSize = new SizeF(132F, 28F);
             RadPageViewPageEntry.Location = new Point(10, 37);
             RadPageViewPageEntry.Name = "RadPageViewPageEntry";
-            RadPageViewPageEntry.Size = new Size(723, 450);
+            RadPageViewPageEntry.Size = new Size(761, 486);
             RadPageViewPageEntry.Text = "radPageViewPageEnter";
             // 
             // radLabel4
@@ -304,13 +301,13 @@ namespace A3DWhatAppSender
             // 
             // radValidationProvider1
             // 
-            radValidationRule3.Controls.Add(RdTxtName);
-            radValidationRule3.ToolTipText = "Contact person phone name cannot be blank";
-            radValidationRule3.Value = "";
-            radValidationRule4.Controls.Add(RdTxtPhoneno);
-            radValidationRule4.ToolTipText = "Contact person phone number cannot be blank";
-            radValidationRule4.Value = "";
-            radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] { radValidationRule3, radValidationRule4 });
+            radValidationRule1.Controls.Add(RdTxtName);
+            radValidationRule1.ToolTipText = "Contact person phone name cannot be blank";
+            radValidationRule1.Value = "";
+            radValidationRule2.Controls.Add(RdTxtPhoneno);
+            radValidationRule2.ToolTipText = "Contact person phone number cannot be blank";
+            radValidationRule2.Value = "";
+            radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] { radValidationRule1, radValidationRule2 });
             // 
             // commandBarRowElement1
             // 
@@ -326,7 +323,7 @@ namespace A3DWhatAppSender
             // 
             commandBarStripElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             commandBarStripElement1.DisplayName = "commandBarStripElement1";
-            commandBarStripElement1.Items.AddRange(new RadCommandBarBaseItem[] { CmdBarBtnAdd, CmdBarBtnEdit, CmdBarBtnSave, commandBarSeparator1, CmdBarBtnDelete, CmdBarBtnUndo, commandBarSeparator2, CmbBarBtnUploadExcel, CmdBarBtnRefresh });
+            commandBarStripElement1.Items.AddRange(new RadCommandBarBaseItem[] { CmdBarBtnAdd, CmdBarBtnEdit, CmdBarBtnSave, commandBarSeparator1, CmdBarBtnDelete, CmdBarBtnUndo, commandBarSeparator2, CmdBarBtnRefresh, CmdBarBtnUploadExcel, CmdBarBtnExport });
             commandBarStripElement1.Name = "commandBarStripElement1";
             commandBarStripElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             commandBarStripElement1.UseCompatibleTextRendering = false;
@@ -336,10 +333,11 @@ namespace A3DWhatAppSender
             CmdBarBtnAdd.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             CmdBarBtnAdd.DisplayName = "commandBarButton1";
             CmdBarBtnAdd.Image = (Image)resources.GetObject("CmdBarBtnAdd.Image");
+            CmdBarBtnAdd.KeyTip = "CTRL+N";
             CmdBarBtnAdd.Name = "CmdBarBtnAdd";
             CmdBarBtnAdd.Text = "Add New Record";
             CmdBarBtnAdd.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            CmdBarBtnAdd.ToolTipText = "Add New Record";
+            CmdBarBtnAdd.ToolTipText = "Add New Record (Ctrl + N)";
             CmdBarBtnAdd.UseCompatibleTextRendering = false;
             CmdBarBtnAdd.Click += CmdBarBtnAdd_Click;
             // 
@@ -351,7 +349,7 @@ namespace A3DWhatAppSender
             CmdBarBtnEdit.Name = "CmdBarBtnEdit";
             CmdBarBtnEdit.Text = "Edit Record";
             CmdBarBtnEdit.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            CmdBarBtnEdit.ToolTipText = "Edit Record";
+            CmdBarBtnEdit.ToolTipText = "Edit Record  (Ctrl + E)";
             CmdBarBtnEdit.UseCompatibleTextRendering = false;
             CmdBarBtnEdit.Click += CmdBarBtnEdit_Click;
             // 
@@ -363,7 +361,7 @@ namespace A3DWhatAppSender
             CmdBarBtnSave.Name = "CmdBarBtnSave";
             CmdBarBtnSave.Text = "Save Chagnes";
             CmdBarBtnSave.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            CmdBarBtnSave.ToolTipText = "Save Chagnes";
+            CmdBarBtnSave.ToolTipText = "Save Chagnes  (Ctrl + S)";
             CmdBarBtnSave.UseCompatibleTextRendering = false;
             CmdBarBtnSave.Click += CmdBarBtnSave_Click;
             // 
@@ -384,7 +382,7 @@ namespace A3DWhatAppSender
             CmdBarBtnDelete.Name = "CmdBarBtnDelete";
             CmdBarBtnDelete.Text = "Delete Record";
             CmdBarBtnDelete.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            CmdBarBtnDelete.ToolTipText = "Delete Record";
+            CmdBarBtnDelete.ToolTipText = "Delete Record  (Ctrl + D)";
             CmdBarBtnDelete.UseCompatibleTextRendering = false;
             CmdBarBtnDelete.Click += CmdBarBtnDelete_Click;
             // 
@@ -396,7 +394,7 @@ namespace A3DWhatAppSender
             CmdBarBtnUndo.Name = "CmdBarBtnUndo";
             CmdBarBtnUndo.Text = "Undo Changes";
             CmdBarBtnUndo.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            CmdBarBtnUndo.ToolTipText = "Undo Changes";
+            CmdBarBtnUndo.ToolTipText = "Undo Changes  (Ctrl + Z)";
             CmdBarBtnUndo.UseCompatibleTextRendering = false;
             CmdBarBtnUndo.Click += CmdBarBtnUndo_Click;
             // 
@@ -409,25 +407,34 @@ namespace A3DWhatAppSender
             commandBarSeparator2.UseCompatibleTextRendering = false;
             commandBarSeparator2.VisibleInOverflowMenu = false;
             // 
-            // CmbBarBtnUploadExcel
-            // 
-            CmbBarBtnUploadExcel.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            CmbBarBtnUploadExcel.DisplayName = "commandBarButton6";
-            CmbBarBtnUploadExcel.Image = (Image)resources.GetObject("CmbBarBtnUploadExcel.Image");
-            CmbBarBtnUploadExcel.Name = "CmbBarBtnUploadExcel";
-            CmbBarBtnUploadExcel.Text = "Export Excel";
-            CmbBarBtnUploadExcel.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            CmbBarBtnUploadExcel.ToolTipText = "Export Excel";
-            CmbBarBtnUploadExcel.UseCompatibleTextRendering = false;
-            CmbBarBtnUploadExcel.Click += CmbBarBtnUploadExcel_Click;
-            // 
             // CmdBarBtnRefresh
             // 
             CmdBarBtnRefresh.DisplayName = "commandBarButton1";
             CmdBarBtnRefresh.Image = (Image)resources.GetObject("CmdBarBtnRefresh.Image");
             CmdBarBtnRefresh.Name = "CmdBarBtnRefresh";
-            CmdBarBtnRefresh.Text = "commandBarButton1";
+            CmdBarBtnRefresh.Text = "Refresh Data";
+            CmdBarBtnRefresh.ToolTipText = "Refresh Data (Ctrl + R)";
             CmdBarBtnRefresh.Click += CmdBarBtnRefresh_Click;
+            // 
+            // CmdBarBtnUploadExcel
+            // 
+            CmdBarBtnUploadExcel.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            CmdBarBtnUploadExcel.DisplayName = "commandBarButton6";
+            CmdBarBtnUploadExcel.Image = (Image)resources.GetObject("CmdBarBtnUploadExcel.Image");
+            CmdBarBtnUploadExcel.Name = "CmdBarBtnUploadExcel";
+            CmdBarBtnUploadExcel.Text = "Upload Excel";
+            CmdBarBtnUploadExcel.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            CmdBarBtnUploadExcel.ToolTipText = "Export Excel  (Ctrl + O)";
+            CmdBarBtnUploadExcel.UseCompatibleTextRendering = false;
+            CmdBarBtnUploadExcel.Click += CmbBarBtnUploadExcel_Click;
+            // 
+            // CmdBarBtnExport
+            // 
+            CmdBarBtnExport.DisplayName = "commandBarButton1";
+            CmdBarBtnExport.Image = (Image)resources.GetObject("CmdBarBtnExport.Image");
+            CmdBarBtnExport.Name = "CmdBarBtnExport";
+            CmdBarBtnExport.Text = "Export To Excle";
+            CmdBarBtnExport.ToolTipText = "Export To Excle (Ctrl + L)";
             // 
             // CmdBar
             // 
@@ -435,7 +442,7 @@ namespace A3DWhatAppSender
             CmdBar.Location = new Point(0, 0);
             CmdBar.Name = "CmdBar";
             CmdBar.Rows.AddRange(new CommandBarRowElement[] { commandBarRowElement1 });
-            CmdBar.Size = new Size(744, 30);
+            CmdBar.Size = new Size(926, 30);
             CmdBar.TabIndex = 0;
             // 
             // FrmCreateContact
@@ -443,9 +450,10 @@ namespace A3DWhatAppSender
             AutoScaleBaseSize = new Size(7, 15);
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(744, 528);
+            ClientSize = new Size(926, 180);
             Controls.Add(RadPageView);
             Controls.Add(CmdBar);
+            KeyPreview = true;
             Name = "FrmCreateContact";
             Text = "Create Contact";
             Load += FrmCreateContact_Load;
@@ -502,8 +510,9 @@ namespace A3DWhatAppSender
         private CommandBarButton CmdBarBtnDelete;
         private CommandBarButton CmdBarBtnUndo;
         private CommandBarSeparator commandBarSeparator2;
-        private CommandBarButton CmbBarBtnUploadExcel;
+        private CommandBarButton CmdBarBtnUploadExcel;
         private RadCommandBar CmdBar;
         private CommandBarButton CmdBarBtnRefresh;
+        private CommandBarButton CmdBarBtnExport;
     }
 }

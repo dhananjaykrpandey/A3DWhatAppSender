@@ -16,6 +16,8 @@ namespace A3DWhatAppSender
 
             RadPageViewStripElement el = RadPageView.ViewElement as RadPageViewStripElement;
             el.ItemContainer.Visibility = ElementVisibility.Collapsed;
+
+            commandBarStripElement1.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             SetButtonImage();
 
             Reload();
@@ -28,12 +30,41 @@ namespace A3DWhatAppSender
         private void SetButtonImage()
         {
             CmdBarBtnAdd.Image = IconChar.Add.ToBitmap(Color.FromArgb(20, 49, 214), 24);
+            CmdBarBtnAdd.ShowKeyboardCues = true;
+            CmdBarBtnAdd.UseMnemonic = true;
+            CmdBarBtnAdd.Shortcuts.Add(new Telerik.WinControls.RadShortcut(Keys.Control, Keys.N));
+
+
+
             CmdBarBtnEdit.Image = IconChar.Edit.ToBitmap(Color.FromArgb(52, 14, 3), 24);
+            CmdBarBtnEdit.ShowKeyboardCues = true;
+            CmdBarBtnEdit.UseMnemonic = true;
+            CmdBarBtnEdit.Shortcuts.Add(new Telerik.WinControls.RadShortcut(Keys.Control, Keys.E));
             CmdBarBtnSave.Image = IconChar.Save.ToBitmap(Color.FromArgb(42, 186, 27), 24);
+            CmdBarBtnSave.ShowKeyboardCues = true;
+            CmdBarBtnSave.UseMnemonic = true;
+            CmdBarBtnSave.Shortcuts.Add(new Telerik.WinControls.RadShortcut(Keys.Control, Keys.S));
             CmdBarBtnDelete.Image = IconChar.TrashAlt.ToBitmap(Color.FromArgb(204, 31, 67), 24);
+            CmdBarBtnDelete.ShowKeyboardCues = true;
+            CmdBarBtnDelete.UseMnemonic = true;
+            CmdBarBtnDelete.Shortcuts.Add(new Telerik.WinControls.RadShortcut(Keys.Delete));
             CmdBarBtnUndo.Image = IconChar.UndoAlt.ToBitmap(Color.FromArgb(30, 243, 192), 24);
-            CmbBarBtnUploadExcel.Image = IconChar.FileExcel.ToBitmap(Color.FromArgb(33, 86, 240), 24);
+            CmdBarBtnUndo.ShowKeyboardCues = true;
+            CmdBarBtnUndo.UseMnemonic = true;
+            CmdBarBtnUndo.Shortcuts.Add(new Telerik.WinControls.RadShortcut(Keys.Control, Keys.Z));
+            CmdBarBtnUploadExcel.Image = IconChar.FileExcel.ToBitmap(Color.FromArgb(33, 86, 240), 24);
+            CmdBarBtnUploadExcel.ShowKeyboardCues = true;
+            CmdBarBtnUploadExcel.UseMnemonic = true;
+            CmdBarBtnUploadExcel.Shortcuts.Add(new Telerik.WinControls.RadShortcut(Keys.F10));
             CmdBarBtnRefresh.Image = IconChar.Refresh.ToBitmap(Color.FromArgb(193, 105, 184), 24);
+            CmdBarBtnExport.ShowKeyboardCues = true;
+            CmdBarBtnExport.UseMnemonic = true;
+            CmdBarBtnRefresh.Shortcuts.Add(new Telerik.WinControls.RadShortcut(Keys.F5));
+            CmdBarBtnExport.Image = IconChar.FileExport.ToBitmap(Color.FromArgb(32, 233, 87), 24);
+            CmdBarBtnExport.ShowKeyboardCues = true;
+            CmdBarBtnExport.UseMnemonic = true;
+            CmdBarBtnExport.Shortcuts.Add(new Telerik.WinControls.RadShortcut(Keys.F12));
+
             //CmdBarBtnMoveFirst.Image = IconChar.FastForward.ToBitmap(Color.FromArgb(33, 86, 240), 24);
             //CmdBarBtnMoveLast.Image = IconChar.FastBackward.ToBitmap(Color.FromArgb(33, 86, 240), 24);
             //CmdBarBtnMoveNext.Image = IconChar.StepForward.ToBitmap(Color.FromArgb(193, 105, 184), 24);
@@ -41,7 +72,47 @@ namespace A3DWhatAppSender
             //CmdBarBtnAdd.Image = A3DFontAwesome.IconChar.Add.ToBitmap(Color.FromArgb(32, 233, 87), 24);
             //CmdBarBtnAdd.Image = A3DFontAwesome.IconChar.Add.ToBitmap(Color.FromArgb(32, 233, 87), 24);
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Control | Keys.N:
+                    CmdBarBtnAdd.Focus();
+                    CmdBarBtnAdd.PerformClick();
+                    break;
+                case Keys.Control | Keys.E:
+                    CmdBarBtnEdit.Focus();
+                    CmdBarBtnEdit.PerformClick();
+                    break;
+                case Keys.Delete:
+                    CmdBarBtnDelete.Focus();
+                    CmdBarBtnDelete.PerformClick();
+                    break;
+                case Keys.Control | Keys.S:
+                    CmdBarBtnSave.Focus();
+                    CmdBarBtnSave.PerformClick();
+                    break;
+                case Keys.Control | Keys.Z:
+                    CmdBarBtnUndo.Focus();
+                    CmdBarBtnUndo.PerformClick();
+                    break;
+                case Keys.F5:
+                    CmdBarBtnRefresh.Focus();
+                    CmdBarBtnRefresh.PerformClick();
+                    break;
+                case Keys.F10:
+                    CmdBarBtnExport.Focus();
+                    CmdBarBtnExport.PerformClick();
+                    break;
+                case Keys.F12:
+                    CmdBarBtnUploadExcel.Focus();
+                    CmdBarBtnUploadExcel.PerformClick();
+                    break;
 
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         private void FormAction(bool lValue)
         {
@@ -59,7 +130,7 @@ namespace A3DWhatAppSender
                     RdTxtRemarks.Enabled = lValue;
                     RadChkIsActive.Enabled = lValue;
 
-                    CmbBarBtnUploadExcel.Enabled = !lValue;
+                    CmdBarBtnUploadExcel.Enabled = !lValue;
                     CmdBarBtnAdd.Enabled = !lValue;
                     CmdBarBtnEdit.Enabled = !lValue;
                     CmdBarBtnSave.Enabled = lValue;
@@ -80,7 +151,7 @@ namespace A3DWhatAppSender
                     RdTxtRemarks.Enabled = lValue;
                     RadChkIsActive.Enabled = lValue;
 
-                    CmbBarBtnUploadExcel.Enabled = !lValue;
+                    CmdBarBtnUploadExcel.Enabled = !lValue;
                     CmdBarBtnAdd.Enabled = !lValue;
                     CmdBarBtnEdit.Enabled = !lValue;
                     CmdBarBtnSave.Enabled = lValue;
@@ -136,6 +207,7 @@ namespace A3DWhatAppSender
                     // Get a collection (or create, if doesn't exist)
                     var col = db.GetCollection<ContactDetails>("ContactDetails");
                     var r = col.FindOne(x => x.Id == Convert.ToInt32(id));
+                    RdTxtID.Text = id.ToString();
                     RdTxtName.Text = r.Name;
                     RdTxtEmail.Text = r.ContactEmail;
                     RdTxtPhoneno.Text = r.ContactPhone;

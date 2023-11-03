@@ -24,7 +24,7 @@ namespace A3DWhatAppSender.Classes.Common
 
         }
 
-        public readonly string ProjectName = "A3D What's App Message Sender System";
+        public readonly string ProjectName = "A3D What's App Sender";
 
         public void showMessage(string msg, RadMessageIcon Icon = RadMessageIcon.Info)
         {

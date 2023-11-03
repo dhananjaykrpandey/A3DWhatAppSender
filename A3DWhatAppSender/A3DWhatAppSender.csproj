@@ -20,27 +20,28 @@
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2088.41" />
     <PackageReference Include="Selenium.WebDriver" Version="4.14.1" />
     <PackageReference Include="Selenium.WebDriver.Extensions" Version="4.1.0" />
+    <PackageReference Include="SharpClipboard" Version="3.5.2" />
     <PackageReference Include="UI.for.WinForms.AllControls.NetCore" Version="2023.1.117" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="A3DFontAwesome">
-      <HintPath>..\..\A3DFontAwesomeProject\A3DFontAwesome\A3DFontAwesome\bin\Debug\net6.0-windows\A3DFontAwesome.dll</HintPath>
+      <HintPath>..\..\A3DIcons\WindowsApp\A3DFontAwesome.dll</HintPath>
     </Reference>
     <Reference Include="A3DFontAwesome.Material">
-      <HintPath>..\..\A3DFontAwesomeProject\A3DFontAwesome\A3DFontAwesome.Material\bin\Debug\net6.0-windows\A3DFontAwesome.Material.dll</HintPath>
+      <HintPath>..\..\A3DIcons\WindowsApp\A3DFontAwesome.Material.dll</HintPath>
     </Reference>
     <Reference Include="A3DIcons.ionicons">
-      <HintPath>..\..\A3DFontAwesomeProject\A3DFontAwesome\A3DIcons.ionicons\bin\Debug\net6.0-windows\A3DIcons.ionicons.dll</HintPath>
+      <HintPath>..\..\A3DIcons\WindowsApp\A3DIcons.ionicons.dll</HintPath>
     </Reference>
     <Reference Include="A3DIcons.LineAwesome">
-      <HintPath>..\..\A3DFontAwesomeProject\A3DFontAwesome\A3DIcons.LineAwesome\bin\Debug\net6.0-windows\A3DIcons.LineAwesome.dll</HintPath>
+      <HintPath>..\..\A3DIcons\WindowsApp\A3DIcons.LineAwesome.dll</HintPath>
     </Reference>
     <Reference Include="A3DIcons.RemixIcons">
-      <HintPath>..\..\A3DFontAwesomeProject\A3DFontAwesome\A3DIcons.RemixIcons\bin\Debug\net6.0-windows\A3DIcons.RemixIcons.dll</HintPath>
+      <HintPath>..\..\A3DIcons\WindowsApp\A3DIcons.RemixIcons.dll</HintPath>
     </Reference>
     <Reference Include="A3DIcons.ThemifyIcons">
-      <HintPath>..\..\A3DFontAwesomeProject\A3DFontAwesome\A3DIcons.ThemifyIcons\bin\Debug\net6.0-windows\A3DIcons.ThemifyIcons.dll</HintPath>
+      <HintPath>..\..\A3DIcons\WindowsApp\A3DIcons.ThemifyIcons.dll</HintPath>
     </Reference>
   </ItemGroup>
 
