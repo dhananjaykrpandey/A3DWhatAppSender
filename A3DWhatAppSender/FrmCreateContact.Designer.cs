@@ -171,7 +171,7 @@ namespace A3DWhatAppSender
             RdGridViewList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             RdGridViewList.Name = "RdGridViewList";
             RdGridViewList.RightToLeft = RightToLeft.No;
-            RdGridViewList.Size = new Size(905, 102);
+            RdGridViewList.Size = new Size(923, 54);
             RdGridViewList.TabIndex = 2;
             // 
             // RadPageView
@@ -182,7 +182,7 @@ namespace A3DWhatAppSender
             RadPageView.Location = new Point(0, 30);
             RadPageView.Name = "RadPageView";
             RadPageView.SelectedPage = RadPageViewPageList;
-            RadPageView.Size = new Size(926, 150);
+            RadPageView.Size = new Size(944, 102);
             RadPageView.TabIndex = 1;
             ((RadPageViewStripElement)RadPageView.GetChildAt(0)).StripButtons = StripViewButtons.None;
             // 
@@ -192,7 +192,7 @@ namespace A3DWhatAppSender
             RadPageViewPageList.ItemSize = new SizeF(125F, 28F);
             RadPageViewPageList.Location = new Point(10, 37);
             RadPageViewPageList.Name = "RadPageViewPageList";
-            RadPageViewPageList.Size = new Size(905, 102);
+            RadPageViewPageList.Size = new Size(923, 54);
             RadPageViewPageList.Text = "RadPageViewPageList";
             // 
             // RadPageViewPageEntry
@@ -442,7 +442,7 @@ namespace A3DWhatAppSender
             CmdBar.Location = new Point(0, 0);
             CmdBar.Name = "CmdBar";
             CmdBar.Rows.AddRange(new CommandBarRowElement[] { commandBarRowElement1 });
-            CmdBar.Size = new Size(926, 30);
+            CmdBar.Size = new Size(944, 30);
             CmdBar.TabIndex = 0;
             // 
             // FrmCreateContact
@@ -450,7 +450,7 @@ namespace A3DWhatAppSender
             AutoScaleBaseSize = new Size(7, 15);
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(926, 180);
+            ClientSize = new Size(944, 132);
             Controls.Add(RadPageView);
             Controls.Add(CmdBar);
             KeyPreview = true;
