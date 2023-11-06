@@ -68,7 +68,7 @@
             radPanel1.Dock = DockStyle.Top;
             radPanel1.Location = new Point(0, 0);
             radPanel1.Name = "radPanel1";
-            radPanel1.Size = new Size(954, 100);
+            radPanel1.Size = new Size(972, 100);
             radPanel1.TabIndex = 0;
             // 
             // RdBtnReset
@@ -184,12 +184,12 @@
             gridViewTextBoxColumn2.FieldName = "Name";
             gridViewTextBoxColumn2.HeaderText = "Full Name";
             gridViewTextBoxColumn2.Name = "Name";
-            gridViewTextBoxColumn2.Width = 449;
+            gridViewTextBoxColumn2.Width = 458;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
             gridViewTextBoxColumn3.FieldName = "ContactPhone";
             gridViewTextBoxColumn3.HeaderText = "Contact Phone";
             gridViewTextBoxColumn3.Name = "ContactPhone";
-            gridViewTextBoxColumn3.Width = 241;
+            gridViewTextBoxColumn3.Width = 246;
             gridViewCheckBoxColumn1.EnableExpressionEditor = false;
             gridViewCheckBoxColumn1.FieldName = "IsActive";
             gridViewCheckBoxColumn1.HeaderText = "Is Active";
@@ -197,12 +197,12 @@
             gridViewCheckBoxColumn1.MinWidth = 20;
             gridViewCheckBoxColumn1.Name = "IsActive";
             gridViewCheckBoxColumn1.ReadOnly = true;
-            gridViewCheckBoxColumn1.Width = 98;
+            gridViewCheckBoxColumn1.Width = 100;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.FieldName = "ContactEmail";
             gridViewTextBoxColumn4.HeaderText = "Contact Email";
             gridViewTextBoxColumn4.Name = "ContactEmail";
-            gridViewTextBoxColumn4.Width = 148;
+            gridViewTextBoxColumn4.Width = 150;
             RdGridViewList.MasterTemplate.Columns.AddRange(new GridViewDataColumn[] { gridViewTextBoxColumn1, gridViewTextBoxColumn2, gridViewTextBoxColumn3, gridViewCheckBoxColumn1, gridViewTextBoxColumn4 });
             RdGridViewList.MasterTemplate.EnableAlternatingRowColor = true;
             RdGridViewList.MasterTemplate.EnableCustomFiltering = true;
@@ -210,7 +210,7 @@
             RdGridViewList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             RdGridViewList.Name = "RdGridViewList";
             RdGridViewList.RightToLeft = RightToLeft.No;
-            RdGridViewList.Size = new Size(954, 443);
+            RdGridViewList.Size = new Size(972, 395);
             RdGridViewList.TabIndex = 3;
             // 
             // clipboard
@@ -230,7 +230,7 @@
             AutoScaleBaseSize = new Size(7, 15);
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(954, 543);
+            ClientSize = new Size(972, 495);
             Controls.Add(RdGridViewList);
             Controls.Add(radPanel1);
             Name = "FrmUploadContact";

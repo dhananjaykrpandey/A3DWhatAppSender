@@ -66,24 +66,26 @@ namespace A3DWhatAppSender
                             ContactDetails contactDetails = new();
                             if (rowValues.Count >= 0)
                             {
-                                contactDetails.Name = rowValues[0] != null && string.IsNullOrEmpty(rowValues[0]) == false ? rowValues[0].ToString() : "";
+                                contactDetails.Name = rowValues[0] != null && string.IsNullOrEmpty(rowValues[0]) == false ? rowValues[0].ToString().Trim() : "";
                                 if (contactDetails.Name == "") { continue; }
                             }
                             if (rowValues.Count >= 1)
                             {
-                                contactDetails.ContactPhone = rowValues[1] != null && string.IsNullOrEmpty(rowValues[1]) == false ? rowValues[1].ToString() : "";
+                                contactDetails.ContactPhone = rowValues[1] != null && string.IsNullOrEmpty(rowValues[1]) == false ? rowValues[1].ToString().Trim() : "";
                             }
                             if (rowValues.Count >= 3)
                             {
-                                contactDetails.ContactEmail = rowValues[3] != null && string.IsNullOrEmpty(rowValues[3]) == false ? rowValues[3].ToString() : "";
+                                contactDetails.ContactEmail = rowValues[3] != null && string.IsNullOrEmpty(rowValues[3]) == false ? rowValues[3].ToString().Trim() : "";
                             }
                             contactDetails.IsActive = true;
-                            contacts.Add(contactDetails);
+                            if (IsDuplicate(contactDetails, contacts) == false) { contacts.Add(contactDetails); }
                         }
                     }
 
                 }
                 RdGridViewList.DataSource = contacts;
+                RdGridViewList.Update();
+                RdGridViewList.Refresh();
             }
             catch (Exception ex)
             {
@@ -115,19 +117,19 @@ namespace A3DWhatAppSender
                             ContactDetails contactDetails = new();
                             if (rowValues.Count >= 0)
                             {
-                                contactDetails.Name = rowValues[0] != null && string.IsNullOrEmpty(rowValues[0]) == false ? rowValues[0].ToString() : "";
+                                contactDetails.Name = rowValues[0] != null && string.IsNullOrEmpty(rowValues[0]) == false ? rowValues[0].ToString().Trim() : "";
                                 if (contactDetails.Name == "") { continue; }
                             }
                             if (rowValues.Count >= 1)
                             {
-                                contactDetails.ContactPhone = rowValues[1] != null && string.IsNullOrEmpty(rowValues[1]) == false ? rowValues[1].ToString() : "";
+                                contactDetails.ContactPhone = rowValues[1] != null && string.IsNullOrEmpty(rowValues[1]) == false ? rowValues[1].ToString().Trim() : "";
                             }
                             if (rowValues.Count >= 3)
                             {
-                                contactDetails.ContactEmail = rowValues[3] != null && string.IsNullOrEmpty(rowValues[3]) == false ? rowValues[3].ToString() : "";
+                                contactDetails.ContactEmail = rowValues[3] != null && string.IsNullOrEmpty(rowValues[3]) == false ? rowValues[3].ToString().Trim() : "";
                             }
                             contactDetails.IsActive = true;
-                            contacts.Add(contactDetails);
+                            if (IsDuplicate(contactDetails, contacts) == false) { contacts.Add(contactDetails); }
                         }
                     }
 
@@ -143,11 +145,32 @@ namespace A3DWhatAppSender
             }
         }
 
+        private bool IsDuplicate(ContactDetails contactDetails, BindingList<ContactDetails> contactDetailsList)
+        {
+            try
+            {
+                var isExists = contactDetailsList.Where(x => x.Name.ToUpper() == contactDetails.Name.ToUpper() && x.ContactPhone.ToString() == contactDetails.ContactPhone.ToString() && x.ContactEmail == contactDetails.ContactEmail).Any();
+                return isExists;
+            }
+            catch (Exception ex)
+            {
+
+                ClsMessage._IClsMessage.ProjectExceptionMessage(ex);
+                return false;
+            }
+        }
+
         private void RdBtnSave_Click(object sender, EventArgs e)
         {
             try
             {
-
+                using (var db = new LiteDB.LiteDatabase(Path.Combine(Application.StartupPath, "A3DWhatsapp.db")))
+                {
+                    // Get a collection (or create, if doesn't exist)
+                    var col = db.GetCollection<ContactDetails>("ContactDetails");
+                    col.Insert(contacts);
+                    ClsMessage._IClsMessage.showSaveMessage();
+                }
             }
             catch (Exception ex)
             {
