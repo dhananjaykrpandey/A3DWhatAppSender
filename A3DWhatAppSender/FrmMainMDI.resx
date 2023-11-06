@@ -120,6 +120,14 @@
   <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="radRichTextEditor1.Text" xml:space="preserve">
+    <value>This application used What's App Web Version to send message to single person.
+Select contact form contact list and type your message or send image/video.
+You can filter user based on group as you created.
+Open web login from menu and login by scan QR code.
+What's App Group not accessible by this application.
+</value>
+  </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>128, 17</value>
   </metadata>

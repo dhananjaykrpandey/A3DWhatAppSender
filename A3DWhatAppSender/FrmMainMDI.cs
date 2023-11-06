@@ -6,7 +6,11 @@ using System.Reflection;
 using System.Web;
 using System.Windows.Forms;
 using Telerik.WinControls.UI.Docking;
+using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Core;
+using Telerik.WinForms.Documents.FormatProviders.Xaml;
+using Telerik.WinForms.Documents.Model;
+using Telerik.WinForms.RichTextEditor;
 
 namespace A3DWhatAppSender
 {
@@ -35,7 +39,7 @@ namespace A3DWhatAppSender
             imageList1.Images.Add(A3DFontAwesome.IconChar.MailBulk.ToBitmap(color: Color.FromArgb(208, 47, 87), 36));
             imageList1.Images.Add(A3DFontAwesome.IconChar.PeopleGroup.ToBitmap(color: Color.FromArgb(27, 148, 11), 36));
             ToolWindowWebBrowser.Close();
-      
+
 
             Icon = System.Drawing.Icon.FromHandle(A3DFontAwesome.IconChar.Whatsapp.ToBitmap(Color.FromArgb(32, 233, 87), 48).GetHicon());
             Text = ClsMessage._IClsMessage.ProjectName;
@@ -43,7 +47,7 @@ namespace A3DWhatAppSender
 
         private void FrmMainMDI_Load(object sender, EventArgs e)
         {
-
+            this.radRichTextEditor1.LoadFile(Application.StartupPath + "\\Docmain.rtf", RichTextBoxStreamType.RichText);
         }
 
         private void RadTreeViewMenu_NodeMouseDoubleClick(object sender, RadTreeViewEventArgs e)
