@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +16,9 @@ namespace A3DWhatAppSender.Classes.Model
         public bool IsActive { get; set; }
 
         public string Remarks { get; set; }
+
+        [NotMapped]
+        public string GroupName { get; set; }
+
     }
 }

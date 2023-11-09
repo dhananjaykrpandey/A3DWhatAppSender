@@ -4,6 +4,8 @@ using A3DFontAwesome;
 using A3DWhatAppSender.Classes.Common;
 using A3DWhatAppSender.Classes.Model;
 
+using Telerik.WinControls.UI;
+
 namespace A3DWhatAppSender
 {
     public partial class FrmCreateContact : RadForm
@@ -27,6 +29,7 @@ namespace A3DWhatAppSender
             FormAction(false);
 
         }
+
         private void SetButtonImage()
         {
             CmdBarBtnAdd.Image = IconChar.Add.ToBitmap(Color.FromArgb(20, 49, 214), 24);
@@ -213,6 +216,19 @@ namespace A3DWhatAppSender
                     RdTxtPhoneno.Text = r.ContactPhone;
                     RdTxtRemarks.Text = r.Remarks;
                     RadChkIsActive.Checked = r.IsActive;
+
+
+                    var colGroupContact = db.GetCollection<GroupContact>("GroupContact").Query().Where(x => x.ContactDetailsId == r.Id).ToList();
+
+                    foreach (var item in colGroupContact)
+                    {
+                        var vItem = RdChkDDGroup.Items.Where(x => Convert.ToInt32(x.Tag) == item.GroupDetailId).FirstOrDefault();
+                        if (vItem != null)
+                        {
+                            RadCheckedListDataItem dataItem = vItem as RadCheckedListDataItem;
+                            if (dataItem != null) { dataItem.Checked = true; }
+                        }
+                    }
                 }
 
 
@@ -233,24 +249,50 @@ namespace A3DWhatAppSender
                 {
                     // Get a collection (or create, if doesn't exist)
                     var col = db.GetCollection<ContactDetails>("ContactDetails");
+                    var colGroupContact = db.GetCollection<GroupContact>("GroupContact");
+                    List<GroupContact> groupContacts = new List<GroupContact>();
                     var contactDt = new ContactDetails
                     {
                         Name = RdTxtName.Text,
                         ContactEmail = RdTxtEmail.Text,
                         ContactPhone = RdTxtPhoneno.Text,
                         Remarks = RdTxtRemarks.Text,
-                        IsActive = RadChkIsActive.Checked,
+                        IsActive = RadChkIsActive.Checked == true ? true : false,
                     };
+
+
+
                     switch (ClsUtility._IClsUtility.FormMode)
                     {
                         case ClsUtility.EnmFormMode.AddMode:
                             col.Insert(contactDt);
+                            foreach (var c in RdChkDDGroup.CheckedItems)
+                            {
+                                groupContacts.Add(new GroupContact { GroupDetailId = Convert.ToInt32(c.Tag), ContactDetailsId = contactDt.Id });
+                            }
+                            colGroupContact.InsertBulk(groupContacts);
                             break;
                         case ClsUtility.EnmFormMode.EditMode:
+
+                            contactDt.Id = Convert.ToInt32(RdTxtID.Text);
+                            // Get a collection (or create, if doesn't exist)
+                            var colGroupContactDelete = db.GetCollection<GroupContact>("GroupContact").DeleteMany(x => x.ContactDetailsId == Convert.ToInt32(contactDt.Id));
+
                             col.Update(contactDt);
+
+                            foreach (var c in RdChkDDGroup.CheckedItems)
+                            {
+                                groupContacts.Add(new GroupContact { GroupDetailId = Convert.ToInt32(c.Tag), ContactDetailsId = contactDt.Id });
+                            }
+                            colGroupContact.InsertBulk(groupContacts);
+
+
                             break;
 
                     }
+
+
+
                     ClsMessage._IClsMessage.showSaveMessage();
                     ClsUtility._IClsUtility.FormMode = ClsUtility.EnmFormMode.NormalMode;
                     FormAction(false);
@@ -275,7 +317,11 @@ namespace A3DWhatAppSender
                     using (var db = new LiteDB.LiteDatabase(Path.Combine(Application.StartupPath, "A3DWhatsapp.db")))
                     {
                         // Get a collection (or create, if doesn't exist)
+                        var colGroupContactDelete = db.GetCollection<GroupContact>("GroupContact").DeleteMany(x => x.ContactDetailsId == Convert.ToInt32(id));
+
+                        // Get a collection (or create, if doesn't exist)
                         var col = db.GetCollection<ContactDetails>("ContactDetails").DeleteMany(x => x.Id == Convert.ToInt32(id));
+
                         ClsMessage._IClsMessage.showDeleteMessage();
 
                     }
@@ -319,10 +365,59 @@ namespace A3DWhatAppSender
             using (var db = new LiteDB.LiteDatabase(Path.Combine(Application.StartupPath, "A3DWhatsapp.db")))
             {
                 // Get a collection (or create, if doesn't exist)
-                var col = db.GetCollection<ContactDetails>("ContactDetails");
+                var col = db.GetCollection<ContactDetails>("ContactDetails").Query().ToList();
+                var colGroup = db.GetCollection<GroupDetail>("GroupDetail").Query().ToList();
 
-                RdGridViewList.DataSource = col.Query().ToList();
+                foreach (var item in col)
+                {
+                    var UserGrpName = db.GetCollection<GroupContact>("GroupContact").Query().Where(x => x.ContactDetailsId == item.Id).ToList();
+
+
+                    List<string> GroupNameContact = new();
+                    foreach (var Groupitem in UserGrpName)
+                    {
+
+                        var GrpName = colGroup.Where(x => x.Id == Groupitem.GroupDetailId).FirstOrDefault();
+
+                        GroupNameContact.Add(GrpName.GroupName);
+                    }
+                    if (GroupNameContact.Count > 0)
+                    {
+                        item.GroupName = string.Join(",", GroupNameContact);
+                    }
+
+                }
+                RdChkDDGroup.Items.Clear();
+
+                RdGridViewList.DataSource = col;
+                foreach (var VItem in colGroup)
+                {
+                    RadCheckedListDataItem dataItem = new RadCheckedListDataItem();
+                    dataItem.Text = VItem.GroupName;
+                    dataItem.Tag = VItem.Id;
+                    RdChkDDGroup.Items.Add(dataItem);
+
+                }
+
             }
+        }
+
+        private void RdChkDDGroup_VisualListItemFormatting(object sender, VisualItemFormattingEventArgs args)
+        {
+            bool itemChecked = ((RadCheckedListDataItem)args.VisualItem.Data).Checked;
+            if (itemChecked)
+            {
+                args.VisualItem.ForeColor = Color.Green;
+            }
+            else
+            {
+                args.VisualItem.ForeColor = Color.Red;
+            }
+        }
+
+        private void RdChkDDGroup_Leave(object sender, EventArgs e)
+        {
+            RdChkDDGroup.Popup.ClosePopup(RadPopupCloseReason.CloseCalled);
         }
     }
 }

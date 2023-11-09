@@ -6,7 +6,11 @@ using System.Reflection;
 using System.Web;
 using System.Windows.Forms;
 using Telerik.WinControls.UI.Docking;
+using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Core;
+using Telerik.WinForms.Documents.FormatProviders.Xaml;
+using Telerik.WinForms.Documents.Model;
+using Telerik.WinForms.RichTextEditor;
 
 namespace A3DWhatAppSender
 {
@@ -35,8 +39,7 @@ namespace A3DWhatAppSender
             imageList1.Images.Add(A3DFontAwesome.IconChar.MailBulk.ToBitmap(color: Color.FromArgb(208, 47, 87), 36));
             imageList1.Images.Add(A3DFontAwesome.IconChar.PeopleGroup.ToBitmap(color: Color.FromArgb(27, 148, 11), 36));
             ToolWindowWebBrowser.Close();
-            RadBtnLogout.Enabled = false;
-            RadBtnLogin.Enabled = false;
+
 
             Icon = System.Drawing.Icon.FromHandle(A3DFontAwesome.IconChar.Whatsapp.ToBitmap(Color.FromArgb(32, 233, 87), 48).GetHicon());
             Text = ClsMessage._IClsMessage.ProjectName;
@@ -44,7 +47,7 @@ namespace A3DWhatAppSender
 
         private void FrmMainMDI_Load(object sender, EventArgs e)
         {
-
+            this.radRichTextEditor1.LoadFile(Application.StartupPath + "\\Docmain.rtf", RichTextBoxStreamType.RichText);
         }
 
         private void RadTreeViewMenu_NodeMouseDoubleClick(object sender, RadTreeViewEventArgs e)
@@ -69,7 +72,7 @@ namespace A3DWhatAppSender
                             break;
                     }
                 }
-                else if ((!string.IsNullOrEmpty(e.Node.Text) && e.Node.Text != "") && (e.Node.Text.ToUpper() == "LOGIN"))
+                else if ((!string.IsNullOrEmpty(e.Node.Text) && e.Node.Text != "") && (e.Node.Text.ToUpper() == "Open Web Login".ToUpper()))
                 {
                     ////wVWhatsApp.Source = new Uri("https://web.whatsapp.com/", UriKind.Absolute);
                     //var message = "Hello";
@@ -83,7 +86,8 @@ namespace A3DWhatAppSender
                     ClsUtility._IClsUtility._gMessenger.IsLogin = false;
                     RadTextBoxLog.AppendText("driver started." + Environment.NewLine);
                     ClsUtility._IClsUtility._gMessenger.OnQRReady += Messenger_OnQRReady;
-                    RadBtnLogin.Enabled = true;
+                    //RadBtnLogin.Enabled = true;
+                    backgroundWorker1.RunWorkerAsync();
                 }
             }
             catch (Exception ex)
@@ -199,7 +203,7 @@ namespace A3DWhatAppSender
                 //button1.Enabled = true;
                 //button2.Enabled = true;
                 //button3.Enabled = true;
-                RadBtnLogout.Enabled = true;
+                //RadBtnLogout.Enabled = true;
             }
         }
 

@@ -15,11 +15,11 @@ namespace A3DWhatAppSender
 
         private void RadBtnSend_Click(object sender, EventArgs e)
         {
-            foreach (var item in messagesContact)
-            {
-                Thread.Sleep(5000);
-                ClsUtility._IClsUtility._gMessenger.SendMessage(item, "Test Message");
-            }
+            //foreach (var item in messagesContact)
+            //{
+            //    Thread.Sleep(5000);
+            //    ClsUtility._IClsUtility._gMessenger.SendMessage(item, "Test Message");
+            //}
         }
     }
 }

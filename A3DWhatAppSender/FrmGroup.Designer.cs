@@ -30,10 +30,6 @@
         {
             GridViewTextBoxColumn gridViewTextBoxColumn1 = new GridViewTextBoxColumn();
             GridViewTextBoxColumn gridViewTextBoxColumn2 = new GridViewTextBoxColumn();
-            GridViewTextBoxColumn gridViewTextBoxColumn3 = new GridViewTextBoxColumn();
-            GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new GridViewCheckBoxColumn();
-            GridViewTextBoxColumn gridViewTextBoxColumn4 = new GridViewTextBoxColumn();
-            GridViewTextBoxColumn gridViewTextBoxColumn5 = new GridViewTextBoxColumn();
             TableViewDefinition tableViewDefinition1 = new TableViewDefinition();
             ComponentResourceManager resources = new ComponentResourceManager(typeof(FrmGroup));
             RadPageView = new RadPageView();
@@ -78,10 +74,10 @@
             RadPageView.Controls.Add(RadPageViewPageList);
             RadPageView.Controls.Add(RadPageViewPageEntry);
             RadPageView.Dock = DockStyle.Fill;
-            RadPageView.Location = new Point(0, 55);
+            RadPageView.Location = new Point(0, 30);
             RadPageView.Name = "RadPageView";
-            RadPageView.SelectedPage = RadPageViewPageEntry;
-            RadPageView.Size = new Size(850, 383);
+            RadPageView.SelectedPage = RadPageViewPageList;
+            RadPageView.Size = new Size(862, 376);
             RadPageView.TabIndex = 3;
             ((RadPageViewStripElement)RadPageView.GetChildAt(0)).StripButtons = StripViewButtons.None;
             // 
@@ -91,7 +87,7 @@
             RadPageViewPageList.ItemSize = new SizeF(125F, 28F);
             RadPageViewPageList.Location = new Point(10, 37);
             RadPageViewPageList.Name = "RadPageViewPageList";
-            RadPageViewPageList.Size = new Size(817, 367);
+            RadPageViewPageList.Size = new Size(841, 328);
             RadPageViewPageList.Text = "RadPageViewPageList";
             // 
             // RdGridViewList
@@ -111,6 +107,7 @@
             RdGridViewList.MasterTemplate.AllowDeleteRow = false;
             RdGridViewList.MasterTemplate.AllowEditRow = false;
             RdGridViewList.MasterTemplate.AllowSearchRow = true;
+            RdGridViewList.MasterTemplate.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "Id";
             gridViewTextBoxColumn1.HeaderText = "ID";
@@ -118,40 +115,18 @@
             gridViewTextBoxColumn1.Name = "Id";
             gridViewTextBoxColumn1.Width = 19;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Name";
-            gridViewTextBoxColumn2.HeaderText = "Full Name";
-            gridViewTextBoxColumn2.Name = "Name";
-            gridViewTextBoxColumn2.Width = 262;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "ContactPhone";
-            gridViewTextBoxColumn3.HeaderText = "Contact Phone";
-            gridViewTextBoxColumn3.Name = "ContactPhone";
-            gridViewTextBoxColumn3.Width = 155;
-            gridViewCheckBoxColumn1.EnableExpressionEditor = false;
-            gridViewCheckBoxColumn1.FieldName = "IsActive";
-            gridViewCheckBoxColumn1.HeaderText = "Is Active";
-            gridViewCheckBoxColumn1.HeaderTextAlignment = ContentAlignment.MiddleRight;
-            gridViewCheckBoxColumn1.MinWidth = 20;
-            gridViewCheckBoxColumn1.Name = "IsActive";
-            gridViewCheckBoxColumn1.ReadOnly = true;
-            gridViewCheckBoxColumn1.Width = 65;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "GroupName";
-            gridViewTextBoxColumn4.HeaderText = "Group Name";
-            gridViewTextBoxColumn4.Name = "GroupName";
-            gridViewTextBoxColumn4.Width = 239;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "ContactEmail";
-            gridViewTextBoxColumn5.HeaderText = "Contact Email";
-            gridViewTextBoxColumn5.Name = "ContactEmail";
-            RdGridViewList.MasterTemplate.Columns.AddRange(new GridViewDataColumn[] { gridViewTextBoxColumn1, gridViewTextBoxColumn2, gridViewTextBoxColumn3, gridViewCheckBoxColumn1, gridViewTextBoxColumn4, gridViewTextBoxColumn5 });
+            gridViewTextBoxColumn2.FieldName = "GroupName";
+            gridViewTextBoxColumn2.HeaderText = "Group Name";
+            gridViewTextBoxColumn2.Name = "GroupName";
+            gridViewTextBoxColumn2.Width = 820;
+            RdGridViewList.MasterTemplate.Columns.AddRange(new GridViewDataColumn[] { gridViewTextBoxColumn1, gridViewTextBoxColumn2 });
             RdGridViewList.MasterTemplate.EnableAlternatingRowColor = true;
             RdGridViewList.MasterTemplate.EnableCustomFiltering = true;
             RdGridViewList.MasterTemplate.EnableFiltering = true;
             RdGridViewList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             RdGridViewList.Name = "RdGridViewList";
             RdGridViewList.RightToLeft = RightToLeft.No;
-            RdGridViewList.Size = new Size(817, 367);
+            RdGridViewList.Size = new Size(841, 328);
             RdGridViewList.TabIndex = 2;
             // 
             // RadPageViewPageEntry
@@ -164,7 +139,7 @@
             RadPageViewPageEntry.ItemSize = new SizeF(132F, 28F);
             RadPageViewPageEntry.Location = new Point(10, 37);
             RadPageViewPageEntry.Name = "RadPageViewPageEntry";
-            RadPageViewPageEntry.Size = new Size(829, 335);
+            RadPageViewPageEntry.Size = new Size(841, 328);
             RadPageViewPageEntry.Text = "radPageViewPageEnter";
             // 
             // radLabel4
@@ -217,7 +192,7 @@
             CmdBar.Location = new Point(0, 0);
             CmdBar.Name = "CmdBar";
             CmdBar.Rows.AddRange(new CommandBarRowElement[] { commandBarRowElement1 });
-            CmdBar.Size = new Size(850, 55);
+            CmdBar.Size = new Size(862, 30);
             CmdBar.TabIndex = 2;
             // 
             // commandBarRowElement1
@@ -358,7 +333,7 @@
             AutoScaleBaseSize = new Size(7, 15);
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(850, 438);
+            ClientSize = new Size(862, 406);
             Controls.Add(RadPageView);
             Controls.Add(CmdBar);
             Name = "FrmGroup";

@@ -26,7 +26,7 @@
 
   <ItemGroup>
     <Reference Include="A3DFontAwesome">
-      <HintPath>..\..\A3DWPFUtility\bin\Debug\net7.0-windows\A3DFontAwesome.dll</HintPath>
+      <HintPath>..\..\A3DIcons\WindowsApp\A3DFontAwesome.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -298,10 +298,20 @@
     <None Update="chrome\vulkan-1.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="DocMain.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DocMain.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Whatappicon.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Classes\Common\Doc\" />
   </ItemGroup>
 
 </Project>
