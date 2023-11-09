@@ -304,6 +304,9 @@
     <None Update="DocMain.rtf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="FontDLL\A3DFontAwesome.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Whatappicon.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
